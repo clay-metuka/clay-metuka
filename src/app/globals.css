@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+/* ═══════════════════════════════════════════════
+   CLAY METUKA — Design System Tokens
+   Terracotta primary, Teal whispers
+   ═══════════════════════════════════════════════ */
+@theme {
+  /* Backgrounds */
+  --color-bg: #FAF6F1;
+  --color-bg-alt: #F0EBE3;
+  --color-bg-white: #FEFDFB;
+
+  /* Text */
+  --color-text: #2C2825;
+  --color-text-mid: #6B5E54;
+  --color-text-light: #9B8E82;
+
+  /* Terracotta — Primary accent */
+  --color-terra: #B5674E;
+  --color-terra-dark: #9E5A42;
+  --color-terra-light: #D4946E;
+
+  /* Teal — Quiet secondary */
+  --color-teal: #4A8C8C;
+  --color-teal-light: #7AB5B0;
+  --color-teal-muted: #5B8E8A;
+  --color-teal-deep: #2D6363;
+
+  /* Neutrals */
+  --color-sand: #D4C5B2;
+  --color-border: #E0D7CC;
+  --color-olive: #5B8C6A;
+
+  /* Fonts */
+  --font-heading: "Cormorant Garamond", "Garamond", serif;
+  --font-body: "DM Sans", "Helvetica Neue", sans-serif;
+  --font-hebrew: "Frank Ruhl Libre", serif;
+}
+
+/* ═══ Base ═══ */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background-color: color-mix(in srgb, var(--color-teal-light) 25%, transparent);
+}
+
+/* ═══ Focus states ═══ */
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--color-terra) !important;
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-terra) 8%, transparent);
+}
+
+/* ═══ Scrollbar hide for horizontal scrolls ═══ */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  scrollbar-width: none;
+}
+
+/* ═══ Fade-in animation (triggered by JS) ═══ */
+.fade-in {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ═══ Image hover zoom ═══ */
+.img-zoom {
+  overflow: hidden;
+}
+.img-zoom img,
+.img-zoom > div {
+  transition: transform 0.6s ease;
+}
+.img-zoom:hover img,
+.img-zoom:hover > div {
+  transform: scale(1.03);
+}
