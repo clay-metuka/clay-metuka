@@ -126,7 +126,9 @@ export default async function ProductPage({
                   <ArrowIcon />
                 </Button>
                 <a
-                  href="#"
+                  href="https://wa.me/972522552693?text=Hi%20Metuka!%20I'd%20love%20to%20learn%20more%20about%20your%20work."
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex h-12 w-12 items-center justify-center rounded bg-[#25D366] text-white transition-opacity hover:opacity-90"
                   aria-label="WhatsApp"
                 >

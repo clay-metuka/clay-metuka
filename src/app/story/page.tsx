@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { FadeIn, Label, PlaceholderImage } from "@/components/ui";
 
 export const metadata = { title: "My Story" };
@@ -7,11 +8,15 @@ export default function StoryPage() {
     <>
       {/* Hero split */}
       <section className="grid min-h-[80vh] grid-cols-1 md:grid-cols-2">
-        <PlaceholderImage
-          aspect="auto"
-          label="Metuka working with clay"
-          className="min-h-[400px] md:min-h-[600px]"
-        />
+        <div className="relative min-h-[400px] md:min-h-[600px]">
+          <Image
+            src="/images/metuka-studio.jpg"
+            alt="Metuka working with clay on her rooftop studio"
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
         <div className="flex flex-col justify-center bg-bg-white px-6 py-16 md:px-[72px] md:py-24">
           <FadeIn>
             <Label>My Story</Label>
