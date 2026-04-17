@@ -5,31 +5,30 @@ import { FadeIn, Label, Button, PlaceholderImage, ArrowIcon } from "@/components
 export default function HomePage() {
   return (
     <>
-      {/* ═══ HERO — full viewport, cinematic ═══ */}
-      <section
-        className="relative flex min-h-screen items-end overflow-hidden"
-        style={{
-          background:
-            "linear-gradient(160deg, #2a2420 0%, #1e1b18 40%, #1a2828 100%)",
-        }}
-      >
-        {/* Subtle glow */}
+      {/* ═══ HERO — cinematic with lifestyle photo ═══ */}
+      <section className="relative flex h-[50vh] min-h-[420px] items-end overflow-hidden md:h-[70vh] md:min-h-[560px]">
+        {/* Background image */}
+        <Image
+          src="/images/products/shabbat_tray/lifestyle.jpeg"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+        />
+        {/* Dark overlay for text legibility */}
+        <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/55 to-black/40" />
+        {/* Soft teal glow */}
         <div
           className="absolute inset-0"
           style={{
             background:
-              "radial-gradient(ellipse at 65% 40%, rgba(91,142,138,0.05) 0%, transparent 55%)",
+              "radial-gradient(ellipse at 65% 40%, rgba(91,142,138,0.08) 0%, transparent 55%)",
           }}
         />
-        {/* Right image placeholder */}
-        <div className="absolute top-0 right-0 bottom-0 hidden w-[55%] items-center justify-center md:flex">
-          <span className="rotate-[-90deg] text-[11px] uppercase tracking-[3px] text-white/5">
-            Hero Image
-          </span>
-        </div>
 
         {/* Content */}
-        <div className="relative z-10 mx-auto w-full max-w-[1320px] px-6 pt-[120px] pb-20 md:px-10 md:pb-[100px]">
+        <div className="relative z-10 mx-auto w-full max-w-[1320px] px-6 pt-[100px] pb-14 md:px-10 md:pb-[80px]">
           <div className="max-w-[560px]">
             <FadeIn>
               <Label className="!text-teal-light/65 mb-5">
