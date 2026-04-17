@@ -5,64 +5,78 @@ import { FadeIn, Label, Button, PlaceholderImage, ArrowIcon } from "@/components
 export default function HomePage() {
   return (
     <>
-      {/* ═══ HERO — solid dark, placeholder for future studio photo ═══ */}
-      <section
-        className="relative flex h-[50vh] min-h-[420px] items-end overflow-hidden md:h-[70vh] md:min-h-[560px]"
-        style={{
-          background:
-            "linear-gradient(160deg, #2C2825 0%, #1E1B18 45%, #1A2826 100%)",
-        }}
-      >
-        {/* Subtle teal glow */}
+      {/* ═══ HERO — split: text left, lifestyle image right ═══ */}
+      <section className="grid grid-cols-1 md:h-[70vh] md:min-h-[560px] md:grid-cols-2">
+        {/* Left — dark text panel */}
         <div
-          className="absolute inset-0"
+          className="relative flex items-end overflow-hidden pt-[100px] pb-14 md:pt-0 md:pb-0"
           style={{
             background:
-              "radial-gradient(ellipse at 65% 40%, rgba(91,142,138,0.06) 0%, transparent 55%)",
+              "linear-gradient(160deg, #2C2825 0%, #1E1B18 45%, #1A2826 100%)",
           }}
-        />
+        >
+          {/* Subtle teal glow */}
+          <div
+            className="absolute inset-0"
+            style={{
+              background:
+                "radial-gradient(ellipse at 70% 50%, rgba(91,142,138,0.08) 0%, transparent 55%)",
+            }}
+          />
 
-        {/* Content */}
-        <div className="relative z-10 mx-auto w-full max-w-[1320px] px-6 pt-[100px] pb-14 md:px-10 md:pb-[80px]">
-          <div className="max-w-[560px]">
-            <FadeIn>
-              <Label className="!text-teal-light/65 mb-5">
-                Handmade in Israel
-              </Label>
-            </FadeIn>
+          <div className="relative z-10 w-full px-6 pb-4 md:flex md:h-full md:items-center md:px-10 md:pb-0 lg:px-16">
+            <div className="max-w-[520px]">
+              <FadeIn>
+                <Label className="!text-teal-light/65 mb-5">
+                  Handmade in Israel
+                </Label>
+              </FadeIn>
 
-            <FadeIn delay={0.1}>
-              <h1 className="mb-7 font-heading text-[clamp(48px,7vw,80px)] font-light leading-[1.05] tracking-[-0.02em] text-[#F5F0EA]">
-                Ritual.
-                <br />
-                Rooted.
-                <br />
-                Handmade.
-              </h1>
-            </FadeIn>
+              <FadeIn delay={0.1}>
+                <h1 className="mb-7 font-heading text-[clamp(44px,6vw,72px)] font-light leading-[1.05] tracking-[-0.02em] text-[#F5F0EA]">
+                  Ritual.
+                  <br />
+                  Rooted.
+                  <br />
+                  Handmade.
+                </h1>
+              </FadeIn>
 
-            <FadeIn delay={0.2}>
-              <p className="mb-11 max-w-[400px] font-body text-[17px] leading-[1.75] text-sand/60">
-                Ceramic vessels for Jewish life — shaped by hand, meant to be
-                used, made to be cherished.
-              </p>
-            </FadeIn>
+              <FadeIn delay={0.2}>
+                <p className="mb-10 max-w-[400px] font-body text-[17px] leading-[1.75] text-sand/60">
+                  Ceramic vessels for Jewish life — shaped by hand, meant to be
+                  used, made to be cherished.
+                </p>
+              </FadeIn>
 
-            <FadeIn delay={0.3}>
-              <div className="flex flex-wrap gap-3.5">
-                <Button href="/gallery">
-                  Explore the Collection <ArrowIcon />
-                </Button>
-                <Button
-                  href="/commission"
-                  outline
-                  className="!text-sand/75 !border-sand/25 hover:!bg-sand/10"
-                >
-                  Commission a Piece
-                </Button>
-              </div>
-            </FadeIn>
+              <FadeIn delay={0.3}>
+                <div className="flex flex-wrap gap-3.5">
+                  <Button href="/gallery">
+                    Explore the Collection <ArrowIcon />
+                  </Button>
+                  <Button
+                    href="/commission"
+                    outline
+                    className="!text-sand/75 !border-sand/25 hover:!bg-sand/10"
+                  >
+                    Commission a Piece
+                  </Button>
+                </div>
+              </FadeIn>
+            </div>
           </div>
+        </div>
+
+        {/* Right — lifestyle image */}
+        <div className="relative aspect-[4/3] md:aspect-auto md:h-full">
+          <Image
+            src="/images/products/espresso_cup/lifestyle.jpeg"
+            alt="Handmade espresso cup in use"
+            fill
+            priority
+            sizes="(max-width: 768px) 100vw, 50vw"
+            className="object-cover"
+          />
         </div>
       </section>
 
