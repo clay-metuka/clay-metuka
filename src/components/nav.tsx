@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 const links = [
@@ -41,16 +42,15 @@ export function Nav() {
       >
         <div className="mx-auto flex h-[72px] max-w-[1320px] items-center justify-between px-6 md:px-10">
           {/* Logo */}
-          <Link href="/" className="flex items-baseline gap-px">
-            <span className="font-hebrew text-[26px] font-bold leading-none text-terra">
-              כ
-            </span>
-            <span
-              className="font-heading text-[20px] font-normal tracking-[0.5px] transition-colors duration-300"
-              style={{ color: light ? "#F5F0EA" : "var(--color-text)" }}
-            >
-              lay Metuka
-            </span>
+          <Link href="/" aria-label="Clay Metuka — Home" className="block">
+            <Image
+              src="/images/logo.png"
+              alt="Clay Metuka"
+              width={48}
+              height={48}
+              priority
+              className="h-12 w-12 rounded-full"
+            />
           </Link>
 
           {/* Desktop links */}
