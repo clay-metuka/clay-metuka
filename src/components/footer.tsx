@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export function Footer() {
   return (
@@ -7,6 +8,13 @@ export function Footer() {
         <div className="mb-16 grid grid-cols-1 gap-12 md:grid-cols-3 md:gap-16">
           {/* Brand */}
           <div>
+            <Image
+              src="/images/logo.png"
+              alt="Clay Metuka"
+              width={72}
+              height={72}
+              className="mb-5 rounded-full"
+            />
             <div className="mb-5 flex items-baseline gap-px">
               <span className="font-hebrew text-[30px] font-bold text-terra">
                 כ
