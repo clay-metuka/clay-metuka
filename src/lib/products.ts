@@ -13,6 +13,8 @@ export type Product = {
   priceUSD?: string;
   size: "sm" | "md" | "lg";
   collection: string;
+  image?: string;
+  lifestyleImage?: string;
 };
 
 export const products: Product[] = [
@@ -33,6 +35,7 @@ export const products: Product[] = [
     priceUSD: "$42",
     size: "lg",
     collection: "first-light",
+    image: "/images/products/natla/hero.jpeg",
   },
   {
     id: "2",
@@ -51,6 +54,7 @@ export const products: Product[] = [
     priceUSD: "$42",
     size: "md",
     collection: "first-light",
+    image: "/images/products/kli_sheni/hero.jpeg",
   },
   {
     id: "3",
@@ -69,6 +73,8 @@ export const products: Product[] = [
     priceUSD: "$70",
     size: "lg",
     collection: "first-light",
+    image: "/images/products/shabbat_tray/hero.jpeg",
+    lifestyleImage: "/images/products/shabbat_tray/lifestyle.jpeg",
   },
   {
     id: "4",
@@ -135,6 +141,25 @@ export const products: Product[] = [
     priceUSD: "$25",
     size: "md",
     collection: "everyday",
+    image: "/images/products/mug/hero.jpg.jpeg",
+  },
+  {
+    id: "9",
+    slug: "espresso-cup",
+    name: "Espresso Cup",
+    hebrew: "פינג'אן",
+    description:
+      "A small, sturdy espresso cup with a hamsa stamp — handmade for your morning ritual.",
+    ritual:
+      "Some rituals are ancient. Some are deeply personal. The first coffee of the morning deserves a vessel shaped by hand.",
+    category: "cups",
+    occasion: ["everyday"],
+    status: "drop",
+    price: "₪70",
+    size: "sm",
+    collection: "everyday",
+    image: "/images/products/espresso_cup/hero.jpeg",
+    lifestyleImage: "/images/products/espresso_cup/lifestyle.jpeg",
   },
   {
     id: "8",

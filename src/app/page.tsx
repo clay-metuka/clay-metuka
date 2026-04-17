@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { FadeIn, Label, Button, PlaceholderImage, ArrowIcon } from "@/components/ui";
 
 export default function HomePage() {
@@ -85,18 +86,24 @@ export default function HomePage() {
             {/* Left — tall */}
             <FadeIn>
               <Link href="/gallery" className="group block">
-                <div className="img-zoom rounded-sm">
-                  <PlaceholderImage aspect="3/4" label="Natla — נטלה" />
+                <div className="img-zoom relative aspect-[3/4] overflow-hidden rounded-sm">
+                  <Image
+                    src="/images/products/kli_sheni/hero.jpeg"
+                    alt="Kli Sheni — כלי שני"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 55vw"
+                    className="object-cover"
+                  />
                 </div>
                 <div className="px-1 pt-3.5">
                   <span className="font-heading text-[22px] text-text">
-                    Natla
+                    Kli Sheni
                   </span>
                   <span className="ml-2.5 font-hebrew text-[15px] text-teal-muted">
-                    נטלה
+                    כלי שני
                   </span>
                   <p className="mt-1 font-body text-[13px] text-text-light">
-                    Ritual handwashing vessel
+                    Shabbat hot water vessel
                   </p>
                 </div>
               </Link>
@@ -106,21 +113,24 @@ export default function HomePage() {
             <div className="flex flex-col gap-5">
               <FadeIn delay={0.1}>
                 <Link href="/gallery" className="group block">
-                  <div className="img-zoom rounded-sm">
-                    <PlaceholderImage
-                      aspect="4/3"
-                      label="Kli Sheni — כלי שני"
+                  <div className="img-zoom relative aspect-[4/3] overflow-hidden rounded-sm">
+                    <Image
+                      src="/images/products/shabbat_tray/lifestyle.jpeg"
+                      alt="Shabbat Tray — מגש שבת"
+                      fill
+                      sizes="(max-width: 768px) 100vw, 45vw"
+                      className="object-cover"
                     />
                   </div>
                   <div className="px-1 pt-3.5">
                     <span className="font-heading text-[22px] text-text">
-                      Kli Sheni
+                      Shabbat Tray
                     </span>
                     <span className="ml-2.5 font-hebrew text-[15px] text-teal-muted">
-                      כלי שני
+                      מגש שבת
                     </span>
                     <p className="mt-1 font-body text-[13px] text-text-light">
-                      Shabbat hot water vessel
+                      Handmade serving tray
                     </p>
                   </div>
                 </Link>
@@ -128,8 +138,14 @@ export default function HomePage() {
 
               <FadeIn delay={0.2}>
                 <Link href="/gallery" className="group block">
-                  <div className="img-zoom rounded-sm">
-                    <PlaceholderImage aspect="4/3" label="Ceramic Mug — ספל" />
+                  <div className="img-zoom relative aspect-[4/3] overflow-hidden rounded-sm">
+                    <Image
+                      src="/images/products/mug/hero.jpg.jpeg"
+                      alt="Ceramic Mug — ספל"
+                      fill
+                      sizes="(max-width: 768px) 100vw, 45vw"
+                      className="object-cover"
+                    />
                   </div>
                   <div className="px-1 pt-3.5">
                     <span className="font-heading text-[22px] text-text">
