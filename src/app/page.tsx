@@ -77,6 +77,21 @@ export default function HomePage() {
             sizes="(max-width: 768px) 100vw, 50vw"
             className="object-cover"
           />
+          {/* Blend edge into left panel */}
+          <div
+            className="pointer-events-none absolute inset-0 hidden md:block"
+            style={{
+              background:
+                "linear-gradient(to right, #1E1B18 0%, rgba(30,27,24,0.6) 6%, rgba(30,27,24,0) 18%)",
+            }}
+          />
+          <div
+            className="pointer-events-none absolute inset-0 md:hidden"
+            style={{
+              background:
+                "linear-gradient(to bottom, #1E1B18 0%, rgba(30,27,24,0.5) 6%, rgba(30,27,24,0) 16%)",
+            }}
+          />
         </div>
       </section>
 
