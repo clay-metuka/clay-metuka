@@ -15,7 +15,7 @@ export default function HomePage() {
           priority
           sizes="100vw"
           className="object-cover"
-          style={{ objectPosition: "center bottom" }}
+          style={{ objectPosition: "center 95%" }}
         />
         {/* Gradient overlay — dark left, clear right */}
         <div
@@ -28,7 +28,7 @@ export default function HomePage() {
 
         {/* Content */}
         <div className="relative z-10 flex h-full items-end pt-[100px] pb-14 md:items-center md:pt-0 md:pb-0">
-          <div className="mx-auto w-full max-w-[1320px] px-6 md:px-10">
+          <div className="mx-auto w-full max-w-[1320px] px-6 pl-8 md:px-10 md:pl-16">
             <div className="max-w-full md:max-w-[50%]">
               <FadeIn>
                 <Label className="!text-teal-light/70 mb-5">
