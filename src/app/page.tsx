@@ -5,25 +5,20 @@ import { FadeIn, Label, Button, PlaceholderImage, ArrowIcon } from "@/components
 export default function HomePage() {
   return (
     <>
-      {/* ═══ HERO — cinematic with lifestyle photo ═══ */}
-      <section className="relative flex h-[50vh] min-h-[420px] items-end overflow-hidden md:h-[70vh] md:min-h-[560px]">
-        {/* Background image */}
-        <Image
-          src="/images/products/shabbat_tray/lifestyle.jpeg"
-          alt=""
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover"
-        />
-        {/* Dark overlay for text legibility */}
-        <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/55 to-black/40" />
-        {/* Soft teal glow */}
+      {/* ═══ HERO — solid dark, placeholder for future studio photo ═══ */}
+      <section
+        className="relative flex h-[50vh] min-h-[420px] items-end overflow-hidden md:h-[70vh] md:min-h-[560px]"
+        style={{
+          background:
+            "linear-gradient(160deg, #2C2825 0%, #1E1B18 45%, #1A2826 100%)",
+        }}
+      >
+        {/* Subtle teal glow */}
         <div
           className="absolute inset-0"
           style={{
             background:
-              "radial-gradient(ellipse at 65% 40%, rgba(91,142,138,0.08) 0%, transparent 55%)",
+              "radial-gradient(ellipse at 65% 40%, rgba(91,142,138,0.06) 0%, transparent 55%)",
           }}
         />
 

@@ -21,7 +21,7 @@ export function Footer() {
             </p>
             <div className="mt-6 flex gap-4">
               <a
-                href="https://www.instagram.com/clay_metuka/"
+                href="https://www.instagram.com/claymetuka/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-sand/40 transition-colors hover:text-teal-light"
