@@ -5,29 +5,32 @@ import { FadeIn, Label, Button, PlaceholderImage, ArrowIcon } from "@/components
 export default function HomePage() {
   return (
     <>
-      {/* ═══ HERO — split: text left, lifestyle image right ═══ */}
-      <section className="grid grid-cols-1 md:h-[70vh] md:min-h-[560px] md:grid-cols-2">
-        {/* Left — dark text panel */}
+      {/* ═══ HERO — full-width image with gradient overlay ═══ */}
+      <section className="relative h-[50vh] min-h-[420px] w-full overflow-hidden md:h-[70vh] md:min-h-[560px]">
+        {/* Background image */}
+        <Image
+          src="/images/products/espresso_cup/lifestyle.jpeg"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+        />
+        {/* Gradient overlay — dark left, clear right */}
         <div
-          className="relative flex items-end overflow-hidden pt-[100px] pb-14 md:pt-0 md:pb-0"
+          className="pointer-events-none absolute inset-0"
           style={{
             background:
-              "linear-gradient(160deg, #2C2825 0%, #1E1B18 45%, #1A2826 100%)",
+              "linear-gradient(to right, rgba(44,40,37,0.85) 0%, rgba(44,40,37,0.7) 30%, rgba(44,40,37,0.2) 60%, rgba(44,40,37,0.05) 100%)",
           }}
-        >
-          {/* Subtle teal glow */}
-          <div
-            className="absolute inset-0"
-            style={{
-              background:
-                "radial-gradient(ellipse at 70% 50%, rgba(91,142,138,0.08) 0%, transparent 55%)",
-            }}
-          />
+        />
 
-          <div className="relative z-10 w-full px-6 pb-4 md:flex md:h-full md:items-center md:px-10 md:pb-0 lg:px-16">
-            <div className="max-w-[520px]">
+        {/* Content */}
+        <div className="relative z-10 flex h-full items-end pt-[100px] pb-14 md:items-center md:pt-0 md:pb-0">
+          <div className="mx-auto w-full max-w-[1320px] px-6 md:px-10">
+            <div className="max-w-full md:max-w-[50%]">
               <FadeIn>
-                <Label className="!text-teal-light/65 mb-5">
+                <Label className="!text-teal-light/70 mb-5">
                   Handmade in Israel
                 </Label>
               </FadeIn>
@@ -43,7 +46,7 @@ export default function HomePage() {
               </FadeIn>
 
               <FadeIn delay={0.2}>
-                <p className="mb-10 max-w-[400px] font-body text-[17px] leading-[1.75] text-sand/60">
+                <p className="mb-10 max-w-[400px] font-body text-[17px] leading-[1.75] text-sand/75">
                   Ceramic vessels for Jewish life — shaped by hand, meant to be
                   used, made to be cherished.
                 </p>
@@ -57,7 +60,7 @@ export default function HomePage() {
                   <Button
                     href="/commission"
                     outline
-                    className="!text-sand/75 !border-sand/25 hover:!bg-sand/10"
+                    className="!text-sand/80 !border-sand/30 hover:!bg-sand/10"
                   >
                     Commission a Piece
                   </Button>
@@ -65,33 +68,6 @@ export default function HomePage() {
               </FadeIn>
             </div>
           </div>
-        </div>
-
-        {/* Right — lifestyle image */}
-        <div className="relative aspect-[4/3] md:aspect-auto md:h-full">
-          <Image
-            src="/images/products/espresso_cup/lifestyle.jpeg"
-            alt="Handmade espresso cup in use"
-            fill
-            priority
-            sizes="(max-width: 768px) 100vw, 50vw"
-            className="object-cover"
-          />
-          {/* Blend edge into left panel */}
-          <div
-            className="pointer-events-none absolute inset-0 hidden md:block"
-            style={{
-              background:
-                "linear-gradient(to right, #1E1B18 0%, rgba(30,27,24,0.6) 6%, rgba(30,27,24,0) 18%)",
-            }}
-          />
-          <div
-            className="pointer-events-none absolute inset-0 md:hidden"
-            style={{
-              background:
-                "linear-gradient(to bottom, #1E1B18 0%, rgba(30,27,24,0.5) 6%, rgba(30,27,24,0) 16%)",
-            }}
-          />
         </div>
       </section>
 
