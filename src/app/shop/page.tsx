@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { products } from "@/lib/products";
 import { FadeIn, Label, Button, PlaceholderImage } from "@/components/ui";
 
@@ -43,7 +44,19 @@ export default function ShopPage() {
             <FadeIn key={p.id} delay={i * 0.1}>
               <div className="overflow-hidden rounded-sm border border-border bg-bg-white">
                 <div className="relative">
-                  <PlaceholderImage aspect="4/5" label="Photo" />
+                  {p.image ? (
+                    <div className="relative aspect-[4/5] overflow-hidden">
+                      <Image
+                        src={p.image}
+                        alt={p.name}
+                        fill
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        className="object-cover"
+                      />
+                    </div>
+                  ) : (
+                    <PlaceholderImage aspect="4/5" label="Photo" />
+                  )}
                   <span className="absolute top-3 right-3 rounded-[3px] bg-bg-white px-3 py-1.5 font-body text-[11px] font-semibold text-teal-muted shadow-[0_2px_8px_rgba(0,0,0,0.08)]">
                     {3 - i} of 3 left
                   </span>

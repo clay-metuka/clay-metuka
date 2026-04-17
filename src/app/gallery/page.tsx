@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { products, categories } from "@/lib/products";
 import { FadeIn, Label, PlaceholderImage } from "@/components/ui";
 
@@ -60,17 +61,35 @@ export default function GalleryPage() {
                 href={`/gallery/${product.slug}`}
                 className="group block transition-transform duration-400 hover:-translate-y-[3px]"
               >
-                <div className="img-zoom overflow-hidden rounded-sm">
-                  <PlaceholderImage
-                    aspect={
-                      product.size === "lg"
-                        ? "3/4"
-                        : product.size === "md"
-                          ? "4/5"
-                          : "1/1"
-                    }
-                    label={product.name}
-                  />
+                <div
+                  className={`img-zoom relative overflow-hidden rounded-sm ${
+                    product.size === "lg"
+                      ? "aspect-[3/4]"
+                      : product.size === "md"
+                        ? "aspect-[4/5]"
+                        : "aspect-square"
+                  }`}
+                >
+                  {product.image ? (
+                    <Image
+                      src={product.image}
+                      alt={product.name}
+                      fill
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      className="object-cover"
+                    />
+                  ) : (
+                    <PlaceholderImage
+                      aspect={
+                        product.size === "lg"
+                          ? "3/4"
+                          : product.size === "md"
+                            ? "4/5"
+                            : "1/1"
+                      }
+                      label={product.name}
+                    />
+                  )}
                 </div>
                 <div className="px-0.5 pt-3.5">
                   <div className="flex items-baseline justify-between">
