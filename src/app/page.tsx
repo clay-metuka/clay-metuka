@@ -15,7 +15,7 @@ export default function HomePage() {
           priority
           sizes="100vw"
           className="object-cover"
-          style={{ objectPosition: "center 70%" }}
+          style={{ objectPosition: "center bottom" }}
         />
         {/* Gradient overlay — dark left, clear right */}
         <div
