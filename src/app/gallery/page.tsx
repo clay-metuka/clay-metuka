@@ -10,6 +10,11 @@ export default function GalleryPage() {
   const [filter, setFilter] = useState("all");
   const filtered =
     filter === "all" ? products : products.filter((p) => p.category === filter);
+  const sorted = [...filtered].sort((a, b) => {
+    const aHas = a.image ? 0 : 1;
+    const bHas = b.image ? 0 : 1;
+    return aHas - bHas;
+  });
 
   return (
     <div className="bg-bg py-16 md:py-[60px] pb-[120px]">
@@ -55,21 +60,13 @@ export default function GalleryPage() {
 
         {/* Product grid */}
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {filtered.map((product, i) => (
+          {sorted.map((product, i) => (
             <FadeIn key={product.id} delay={i * 0.06}>
               <Link
                 href={`/gallery/${product.slug}`}
                 className="group block transition-transform duration-400 hover:-translate-y-[3px]"
               >
-                <div
-                  className={`img-zoom relative overflow-hidden rounded-sm ${
-                    product.size === "lg"
-                      ? "aspect-[3/4]"
-                      : product.size === "md"
-                        ? "aspect-[4/5]"
-                        : "aspect-square"
-                  }`}
-                >
+                <div className="img-zoom relative aspect-[4/5] overflow-hidden rounded-sm">
                   {product.image ? (
                     <Image
                       src={product.image}
@@ -80,13 +77,7 @@ export default function GalleryPage() {
                     />
                   ) : (
                     <PlaceholderImage
-                      aspect={
-                        product.size === "lg"
-                          ? "3/4"
-                          : product.size === "md"
-                            ? "4/5"
-                            : "1/1"
-                      }
+                      aspect="4/5"
                       label={product.name}
                     />
                   )}
