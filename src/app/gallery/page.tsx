@@ -60,24 +60,38 @@ export default function GalleryPage() {
 
         {/* Product grid */}
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {sorted.map((product, i) => (
-            <FadeIn key={product.id} delay={i * 0.06}>
+          {sorted.map((product, i) => {
+            const isWide = product.slug === "shabbat-tray";
+            return (
+            <FadeIn
+              key={product.id}
+              delay={i * 0.06}
+              className={isWide ? "sm:col-span-2" : ""}
+            >
               <Link
                 href={`/gallery/${product.slug}`}
                 className="group block transition-transform duration-400 hover:-translate-y-[3px]"
               >
-                <div className="img-zoom relative aspect-[4/5] overflow-hidden rounded-sm">
+                <div
+                  className={`img-zoom relative overflow-hidden rounded-sm ${
+                    isWide ? "aspect-[16/10]" : "aspect-[4/5]"
+                  }`}
+                >
                   {product.image ? (
                     <Image
                       src={product.image}
                       alt={product.name}
                       fill
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      sizes={
+                        isWide
+                          ? "(max-width: 640px) 100vw, 66vw"
+                          : "(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      }
                       className="object-cover"
                     />
                   ) : (
                     <PlaceholderImage
-                      aspect="4/5"
+                      aspect={isWide ? "16/10" : "4/5"}
                       label={product.name}
                     />
                   )}
@@ -97,7 +111,8 @@ export default function GalleryPage() {
                 </div>
               </Link>
             </FadeIn>
-          ))}
+            );
+          })}
         </div>
       </div>
     </div>
