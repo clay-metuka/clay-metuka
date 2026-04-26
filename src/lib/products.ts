@@ -141,7 +141,7 @@ export const products: Product[] = [
     priceUSD: "$25",
     size: "md",
     collection: "everyday",
-    image: "/images/products/mug/hero.jpg.jpeg",
+    image: "/images/products/mug/hero.jpeg",
   },
   {
     id: "9",

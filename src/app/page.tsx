@@ -140,7 +140,7 @@ export default function HomePage() {
                 <Link href="/gallery" className="group block">
                   <div className="img-zoom relative aspect-[4/3] overflow-hidden rounded-sm">
                     <Image
-                      src="/images/products/mug/hero.jpg.jpeg"
+                      src="/images/products/mug/hero.jpeg"
                       alt="Ceramic Mug — ספל"
                       fill
                       sizes="(max-width: 768px) 100vw, 45vw"
