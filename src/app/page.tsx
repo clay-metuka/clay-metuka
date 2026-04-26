@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { FadeIn, Label, Button, PlaceholderImage, ArrowIcon } from "@/components/ui";
+import { FadeIn, Label, Button, ArrowIcon } from "@/components/ui";
 
 export default function HomePage() {
   return (
@@ -174,11 +174,15 @@ export default function HomePage() {
       {/* ═══ BRAND STORY + embedded quote ═══ */}
       <section className="bg-bg-white">
         <div className="grid min-h-[560px] grid-cols-1 md:grid-cols-[5fr_4fr]">
-          <PlaceholderImage
-            aspect="auto"
-            label="Metuka in her studio"
-            className="min-h-[400px] md:min-h-[560px]"
-          />
+          <div className="relative min-h-[400px] md:min-h-[560px]">
+            <Image
+              src="/images/metuka-about.jpeg"
+              alt="Metuka in her studio"
+              fill
+              sizes="(max-width: 768px) 100vw, 55vw"
+              className="object-cover"
+            />
+          </div>
           <div className="flex flex-col justify-center px-6 py-16 md:px-[72px] md:py-20">
             <FadeIn>
               <Label>The Maker</Label>
