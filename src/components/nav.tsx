@@ -45,7 +45,7 @@ export function Nav() {
           <Link
             href="/"
             aria-label="Clay Metuka — Home"
-            className="flex items-center gap-1"
+            className="flex items-center gap-3"
           >
             <Image
               src="/images/logo.png"
