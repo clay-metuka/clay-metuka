@@ -8,6 +8,8 @@ import { FadeIn, Label, PlaceholderImage } from "@/components/ui";
 
 export default function GalleryPage() {
   const [filter, setFilter] = useState("all");
+  // TODO: Add occasion-based filters (e.g. Shabbat, Ritual, Everyday) when we
+  // have 3+ products tagged with each occasion. Currently filtering on category only.
   const filtered =
     filter === "all" ? products : products.filter((p) => p.category === filter);
   const sorted = [...filtered].sort((a, b) => {

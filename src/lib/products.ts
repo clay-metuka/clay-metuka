@@ -177,6 +177,24 @@ export const products: Product[] = [
     size: "sm",
     collection: "everyday",
   },
+  {
+    id: "10",
+    slug: "kiddush-divider",
+    name: "Kiddush Divider",
+    hebrew: "מחלק קידוש",
+    description:
+      "A spouted ceremonial pourer for distributing kiddush wine — clean, modular, and built for any size table.",
+    ritual:
+      "Kiddush is meant to be shared. But the traditional fountain pourer is awkward to clean, fragile, and rarely scales to the size of your table. The מחלק קידוש solves what no one else has: a single beautiful vessel that pours kiddush wine cleanly into every cup, whether you're three at the table or thirty. Shaped to honor the ritual without complicating it.\n\nHalachically, wine poured from a kiddush cup becomes pagum — diminished — and unfit for others to fulfill their obligation. The מחלק קידוש holds the wine before kiddush, letting you pour fresh, full-strength wine into each guest's cup after the bracha. Beautiful, functional, and quietly solving a problem most Shabbat tables have just learned to live with.",
+    category: "vessels",
+    occasion: ["shabbat", "ritual"],
+    status: "drop",
+    price: "₪180",
+    size: "md",
+    collection: "first-light",
+    image: "/images/products/wine_pourer/hero.jpeg",
+    lifestyleImage: "/images/products/wine_pourer/lifestyle.jpeg",
+  },
 ];
 
 export const categories = [
