@@ -133,7 +133,7 @@ export const products: Product[] = [
       "/images/products/tea_light_pair/1-hero.jpeg",
       "/images/products/tea_light_pair/2-lifestyle.jpeg",
       "/images/products/tea_light_pair/3-styled.jpeg",
-      "/images/products/tea_light_pair/4-styled-alt.jpeg",
+      "/images/products/tea_light_pair/4-detail.jpeg",
     ],
   },
   {
