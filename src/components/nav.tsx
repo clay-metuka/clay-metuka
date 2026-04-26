@@ -42,14 +42,26 @@ export function Nav() {
       >
         <div className="mx-auto flex h-[72px] max-w-[1320px] items-center justify-between px-6 md:px-10">
           {/* Logo */}
-          <Link href="/" aria-label="Clay Metuka — Home" className="block">
+          <Link
+            href="/"
+            aria-label="Clay Metuka — Home"
+            className="flex items-center gap-3"
+          >
             <Image
               src="/images/logo.png"
-              alt="Clay Metuka"
-              width={48}
-              height={48}
+              alt=""
+              width={40}
+              height={40}
               priority
-              className="h-12 w-12 rounded-full"
+              className="h-10 w-10 rounded-full"
+            />
+            <Image
+              src="/images/clay_metuka_text_white.png"
+              alt="Clay Metuka"
+              width={180}
+              height={36}
+              priority
+              className="h-9 w-auto"
             />
           </Link>
 
