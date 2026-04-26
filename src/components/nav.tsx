@@ -55,14 +55,27 @@ export function Nav() {
               priority
               className="h-10 w-10 rounded-full"
             />
-            <Image
-              src="/images/clay_metuka_text_white.png"
-              alt="Clay Metuka"
-              width={180}
-              height={36}
-              priority
-              className="h-9 w-auto"
-            />
+            <div className="relative h-9 w-auto">
+              <Image
+                src="/images/clay_metuka_text_white.png"
+                alt="Clay Metuka"
+                width={180}
+                height={36}
+                priority
+                className="h-9 w-auto transition-opacity duration-300"
+                style={{ opacity: light ? 1 : 0 }}
+              />
+              <Image
+                src="/images/clay_metuka_text_dark.png"
+                alt=""
+                width={180}
+                height={36}
+                priority
+                aria-hidden="true"
+                className="absolute inset-0 h-9 w-auto transition-opacity duration-300"
+                style={{ opacity: light ? 0 : 1 }}
+              />
+            </div>
           </Link>
 
           {/* Desktop links */}
