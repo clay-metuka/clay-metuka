@@ -13,8 +13,8 @@ export default function GalleryPage() {
   const filtered =
     filter === "all" ? products : products.filter((p) => p.category === filter);
   const sorted = [...filtered].sort((a, b) => {
-    const aHas = a.image ? 0 : 1;
-    const bHas = b.image ? 0 : 1;
+    const aHas = a.images.length > 0 ? 0 : 1;
+    const bHas = b.images.length > 0 ? 0 : 1;
     return aHas - bHas;
   });
 
@@ -79,9 +79,9 @@ export default function GalleryPage() {
                     isWide ? "aspect-[16/10]" : "aspect-[4/5]"
                   }`}
                 >
-                  {product.image ? (
+                  {product.images[0] ? (
                     <Image
-                      src={product.image}
+                      src={product.images[0]}
                       alt={product.name}
                       fill
                       sizes={

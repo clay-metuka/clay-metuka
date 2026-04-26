@@ -44,10 +44,10 @@ export default function ShopPage() {
             <FadeIn key={p.id} delay={i * 0.1}>
               <div className="overflow-hidden rounded-sm border border-border bg-bg-white">
                 <div className="relative">
-                  {p.image ? (
+                  {p.images[0] ? (
                     <div className="relative aspect-[4/5] overflow-hidden">
                       <Image
-                        src={p.image}
+                        src={p.images[0]}
                         alt={p.name}
                         fill
                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"

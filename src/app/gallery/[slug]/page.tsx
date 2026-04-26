@@ -1,8 +1,8 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import Image from "next/image";
 import { products, getProduct } from "@/lib/products";
-import { FadeIn, Label, Button, PlaceholderImage, ArrowIcon } from "@/components/ui";
+import { FadeIn, Label, Button, ArrowIcon } from "@/components/ui";
+import { ProductGallery } from "@/components/product-gallery";
 
 export function generateStaticParams() {
   return products.map((p) => ({ slug: p.slug }));
@@ -36,56 +36,7 @@ export default async function ProductPage({
         <div className="grid grid-cols-1 gap-12 md:grid-cols-[1.2fr_1fr] md:gap-20">
           {/* Images */}
           <div>
-            {product.image ? (
-              <div className="relative aspect-[4/5] overflow-hidden rounded-sm">
-                <Image
-                  src={product.image}
-                  alt={product.name}
-                  fill
-                  sizes="(max-width: 768px) 100vw, 55vw"
-                  className="object-cover"
-                  priority
-                />
-              </div>
-            ) : (
-              <PlaceholderImage
-                aspect="4/5"
-                label="Main Photo"
-                className="rounded-sm"
-              />
-            )}
-            <div className="mt-2 grid grid-cols-4 gap-2">
-              {product.lifestyleImage ? (
-                <>
-                  <div className="relative aspect-square overflow-hidden rounded-sm">
-                    <Image
-                      src={product.lifestyleImage}
-                      alt={`${product.name} in use`}
-                      fill
-                      sizes="(max-width: 768px) 25vw, 14vw"
-                      className="object-cover"
-                    />
-                  </div>
-                  {["Detail", "Texture", "Scale"].map((label) => (
-                    <PlaceholderImage
-                      key={label}
-                      aspect="1/1"
-                      label={label}
-                      className="rounded-sm"
-                    />
-                  ))}
-                </>
-              ) : (
-                ["Detail", "Texture", "In Use", "Scale"].map((label) => (
-                  <PlaceholderImage
-                    key={label}
-                    aspect="1/1"
-                    label={label}
-                    className="rounded-sm"
-                  />
-                ))
-              )}
-            </div>
+            <ProductGallery images={product.images} alt={product.name} />
           </div>
 
           {/* Details */}

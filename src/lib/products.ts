@@ -13,8 +13,8 @@ export type Product = {
   priceUSD?: string;
   size: "sm" | "md" | "lg";
   collection: string;
-  image?: string;
-  lifestyleImage?: string;
+  /** First image is the hero (used as gallery card thumbnail). Remaining images are additional views shown on the detail page. */
+  images: string[];
 };
 
 export const products: Product[] = [
@@ -35,7 +35,7 @@ export const products: Product[] = [
     priceUSD: "$42",
     size: "lg",
     collection: "first-light",
-    image: "/images/products/natla/hero.jpeg",
+    images: ["/images/products/natla/hero.jpeg"],
   },
   {
     id: "2",
@@ -54,7 +54,7 @@ export const products: Product[] = [
     priceUSD: "$42",
     size: "md",
     collection: "first-light",
-    image: "/images/products/kli_sheni/hero.jpeg",
+    images: ["/images/products/kli_sheni/hero.jpeg"],
   },
   {
     id: "3",
@@ -73,8 +73,10 @@ export const products: Product[] = [
     priceUSD: "$70",
     size: "lg",
     collection: "first-light",
-    image: "/images/products/shabbat_tray/hero.jpeg",
-    lifestyleImage: "/images/products/shabbat_tray/lifestyle.jpeg",
+    images: [
+      "/images/products/shabbat_tray/hero.jpeg",
+      "/images/products/shabbat_tray/lifestyle.jpeg",
+    ],
   },
   {
     id: "4",
@@ -91,6 +93,7 @@ export const products: Product[] = [
     priceUSD: "$56",
     size: "md",
     collection: "first-light",
+    images: [],
   },
   {
     id: "5",
@@ -109,6 +112,7 @@ export const products: Product[] = [
     priceUSD: "$34",
     size: "sm",
     collection: "first-light",
+    images: [],
   },
   {
     id: "6",
@@ -125,6 +129,7 @@ export const products: Product[] = [
     priceUSD: "$22",
     size: "sm",
     collection: "first-light",
+    images: [],
   },
   {
     id: "7",
@@ -141,7 +146,7 @@ export const products: Product[] = [
     priceUSD: "$25",
     size: "md",
     collection: "everyday",
-    image: "/images/products/mug/hero.jpeg",
+    images: ["/images/products/mug/hero.jpeg"],
   },
   {
     id: "9",
@@ -158,8 +163,10 @@ export const products: Product[] = [
     price: "₪70",
     size: "sm",
     collection: "everyday",
-    image: "/images/products/espresso_cup/hero.jpeg",
-    lifestyleImage: "/images/products/espresso_cup/lifestyle.jpeg",
+    images: [
+      "/images/products/espresso_cup/hero.jpeg",
+      "/images/products/espresso_cup/lifestyle.jpeg",
+    ],
   },
   {
     id: "8",
@@ -176,6 +183,7 @@ export const products: Product[] = [
     priceUSD: "$28",
     size: "sm",
     collection: "everyday",
+    images: [],
   },
   {
     id: "10",
@@ -192,8 +200,10 @@ export const products: Product[] = [
     price: "₪180",
     size: "md",
     collection: "first-light",
-    image: "/images/products/wine_pourer/hero.jpeg",
-    lifestyleImage: "/images/products/wine_pourer/lifestyle.jpeg",
+    images: [
+      "/images/products/wine_pourer/hero.jpeg",
+      "/images/products/wine_pourer/lifestyle.jpeg",
+    ],
   },
 ];
 
