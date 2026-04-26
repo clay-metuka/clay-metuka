@@ -10,19 +10,18 @@ export function Footer() {
           <div>
             <Image
               src="/images/logo.png"
-              alt="Clay Metuka"
+              alt=""
               width={72}
               height={72}
               className="mb-5 rounded-full"
             />
-            <div className="mb-5 flex items-baseline gap-px">
-              <span className="font-hebrew text-[30px] font-bold text-terra">
-                כ
-              </span>
-              <span className="font-heading text-[22px] font-light text-sand">
-                lay Metuka
-              </span>
-            </div>
+            <Image
+              src="/images/clay_metuka_text_white.png"
+              alt="Clay Metuka"
+              width={120}
+              height={24}
+              className="mb-5 h-auto w-[120px]"
+            />
             <p className="max-w-[300px] font-body text-sm leading-relaxed text-sand/45">
               Handmade ceramic vessels for Jewish life, shaped with love in
               Israel.

@@ -191,21 +191,11 @@ export default function HomePage() {
                 <br className="hidden md:block" />
                 with a conversation
               </h2>
-              <p className="mb-5 font-body text-base leading-[1.75] text-text-mid">
+              <p className="mb-7 font-body text-base leading-[1.75] text-text-mid">
                 I&apos;m Metuka — an Israeli artist and mother of three. I shape
                 clay into vessels for Jewish ritual and daily life. Every piece
                 is food safe, oven safe, and made to be used — not just admired.
               </p>
-
-              {/* Quote — quiet aside */}
-              <div className="mb-7 border-l-2 border-teal/25 pl-4">
-                <p className="font-heading text-base font-light italic leading-snug text-text-mid">
-                  &ldquo;Why doesn&apos;t this exist already?&rdquo;
-                </p>
-                <span className="mt-1 block font-body text-[11px] text-text-light">
-                  — on seeing the Kli Sheni
-                </span>
-              </div>
 
               <Button href="/story" outline>
                 Read My Story <ArrowIcon />
