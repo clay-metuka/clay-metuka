@@ -18,9 +18,9 @@ export function Footer() {
             <Image
               src="/images/clay_metuka_text_white.png"
               alt="Clay Metuka"
-              width={120}
-              height={24}
-              className="mb-5 h-auto w-[120px]"
+              width={160}
+              height={32}
+              className="mb-5 h-auto w-[160px]"
             />
             <p className="max-w-[300px] font-body text-sm leading-relaxed text-sand/45">
               Handmade ceramic vessels for Jewish life, shaped with love in
