@@ -129,7 +129,12 @@ export const products: Product[] = [
     priceUSD: "$22",
     size: "sm",
     collection: "first-light",
-    images: [],
+    images: [
+      "/images/products/tea_light_pair/1-hero.jpeg",
+      "/images/products/tea_light_pair/2-lifestyle.jpeg",
+      "/images/products/tea_light_pair/3-styled.jpeg",
+      "/images/products/tea_light_pair/4-styled-alt.jpeg",
+    ],
   },
   {
     id: "7",
