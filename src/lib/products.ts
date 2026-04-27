@@ -74,6 +74,7 @@ export const products: Product[] = [
     size: "md",
     collection: "first-light",
     images: [
+      "/images/products/shabbat_tray/14-round-engraved.jpeg",
       "/images/products/shabbat_tray/1-hero.jpeg",
       "/images/products/shabbat_tray/2-lifestyle.jpeg",
       "/images/products/shabbat_tray/3-rect-detail.jpeg",
@@ -87,7 +88,6 @@ export const products: Product[] = [
       "/images/products/shabbat_tray/11-oval-tealights.jpeg",
       "/images/products/shabbat_tray/12-oval-top.jpeg",
       "/images/products/shabbat_tray/13-oval-top-alt.jpeg",
-      "/images/products/shabbat_tray/14-round-engraved.jpeg",
       "/images/products/shabbat_tray/15-round-dotted.jpeg",
       "/images/products/shabbat_tray/16-round-dotted-alt.jpeg",
       "/images/products/shabbat_tray/17-round-tealights.jpeg",
@@ -214,6 +214,7 @@ export const products: Product[] = [
     images: [
       "/images/products/wine_pourer/hero.jpeg",
       "/images/products/wine_pourer/lifestyle.jpeg",
+      "/images/products/wine_pourer/3-styled.jpeg",
     ],
   },
 ];
