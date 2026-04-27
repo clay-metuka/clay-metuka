@@ -58,15 +58,15 @@ export const products: Product[] = [
   },
   {
     id: "3",
-    slug: "shabbat-tray",
-    name: "Shabbat Tray",
-    hebrew: "מגש שבת",
+    slug: "servingware",
+    name: "Servingware",
+    hebrew: "כלי הגשה",
     description: "Handmade serving tray for your Friday night table",
     longDescription:
       "A generously sized ceramic tray designed to anchor your Shabbat table. Perfect for challah, kiddush cups, or as a centerpiece. Each tray can be personalized with Hebrew engraving.",
     ritual:
       "The Shabbat table is where family gathers every week. This tray is made to be the foundation of that gathering.",
-    category: "trays",
+    category: "servingware",
     occasion: ["shabbat"],
     status: "commission",
     price: "From ₪200",
@@ -221,7 +221,7 @@ export const products: Product[] = [
 export const categories = [
   "all",
   "vessels",
-  "trays",
+  "servingware",
   "cups",
   "mugs",
   "candles",

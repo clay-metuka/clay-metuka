@@ -116,7 +116,7 @@ export default function HomePage() {
                   <div className="img-zoom relative aspect-[4/3] overflow-hidden rounded-sm">
                     <Image
                       src="/images/products/shabbat_tray/lifestyle.jpeg"
-                      alt="Shabbat Tray — מגש שבת"
+                      alt="Servingware — כלי הגשה"
                       fill
                       sizes="(max-width: 768px) 100vw, 45vw"
                       className="object-cover"
@@ -124,10 +124,10 @@ export default function HomePage() {
                   </div>
                   <div className="px-1 pt-3.5">
                     <span className="font-heading text-[22px] text-text">
-                      Shabbat Tray
+                      Servingware
                     </span>
                     <span className="ml-2.5 font-hebrew text-[15px] text-teal-muted">
-                      מגש שבת
+                      כלי הגשה
                     </span>
                     <p className="mt-1 font-body text-[13px] text-text-light">
                       Handmade serving tray
