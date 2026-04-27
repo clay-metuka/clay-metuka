@@ -115,7 +115,7 @@ export default function HomePage() {
                 <Link href="/gallery" className="group block">
                   <div className="img-zoom relative aspect-[4/3] overflow-hidden rounded-sm">
                     <Image
-                      src="/images/products/shabbat_tray/lifestyle.jpeg"
+                      src="/images/products/shabbat_tray/2-lifestyle.jpeg"
                       alt="Servingware — כלי הגשה"
                       fill
                       sizes="(max-width: 768px) 100vw, 45vw"
