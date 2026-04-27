@@ -10,13 +10,9 @@ export default function GalleryPage() {
   const [filter, setFilter] = useState("all");
   // TODO: Add occasion-based filters (e.g. Shabbat, Ritual, Everyday) when we
   // have 3+ products tagged with each occasion. Currently filtering on category only.
-  const filtered =
-    filter === "all" ? products : products.filter((p) => p.category === filter);
-  const sorted = [...filtered].sort((a, b) => {
-    const aHas = a.images.length > 0 ? 0 : 1;
-    const bHas = b.images.length > 0 ? 0 : 1;
-    return aHas - bHas;
-  });
+  const filtered = (
+    filter === "all" ? products : products.filter((p) => p.category === filter)
+  ).filter((p) => p.images.length > 0);
 
   return (
     <div className="bg-bg py-16 md:py-[60px] pb-[120px]">
@@ -62,40 +58,23 @@ export default function GalleryPage() {
 
         {/* Product grid */}
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {sorted.map((product, i) => {
-            const isWide = product.slug === "shabbat-tray";
-            return (
-            <FadeIn
-              key={product.id}
-              delay={i * 0.06}
-              className={isWide ? "sm:col-span-2" : ""}
-            >
+          {filtered.map((product, i) => (
+            <FadeIn key={product.id} delay={i * 0.06}>
               <Link
                 href={`/gallery/${product.slug}`}
                 className="group block transition-transform duration-400 hover:-translate-y-[3px]"
               >
-                <div
-                  className={`img-zoom relative overflow-hidden rounded-sm ${
-                    isWide ? "aspect-[16/10]" : "aspect-[4/5]"
-                  }`}
-                >
+                <div className="img-zoom relative aspect-[4/5] overflow-hidden rounded-sm">
                   {product.images[0] ? (
                     <Image
                       src={product.images[0]}
                       alt={product.name}
                       fill
-                      sizes={
-                        isWide
-                          ? "(max-width: 640px) 100vw, 66vw"
-                          : "(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                      }
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       className="object-cover"
                     />
                   ) : (
-                    <PlaceholderImage
-                      aspect={isWide ? "16/10" : "4/5"}
-                      label={product.name}
-                    />
+                    <PlaceholderImage aspect="4/5" label={product.name} />
                   )}
                 </div>
                 <div className="px-0.5 pt-3.5">
@@ -113,8 +92,7 @@ export default function GalleryPage() {
                 </div>
               </Link>
             </FadeIn>
-            );
-          })}
+          ))}
         </div>
       </div>
     </div>
