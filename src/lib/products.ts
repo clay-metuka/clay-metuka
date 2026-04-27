@@ -196,23 +196,6 @@ export const products: Product[] = [
     ],
   },
   {
-    id: "8",
-    slug: "planter",
-    name: "Planter",
-    hebrew: "עציץ",
-    description: "Small ceramic planter with drainage, perfect for herbs",
-    longDescription:
-      "A small, handmade planter with a drainage hole and matching saucer. Perfect for a kitchen herb garden or a succulent on your windowsill.",
-    category: "planters",
-    occasion: ["everyday"],
-    status: "commission",
-    price: "₪100",
-    priceUSD: "$28",
-    size: "sm",
-    collection: "everyday",
-    images: [],
-  },
-  {
     id: "10",
     slug: "kiddush-divider",
     name: "Kiddush Divider",
@@ -243,7 +226,6 @@ export const categories = [
   "mugs",
   "candles",
   "baskets",
-  "planters",
 ] as const;
 
 export function getProduct(slug: string) {

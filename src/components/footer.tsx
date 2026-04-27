@@ -66,7 +66,6 @@ export function Footer() {
               { href: "/gallery", label: "Gallery" },
               { href: "/story", label: "Story" },
               { href: "/commission", label: "Commission" },
-              { href: "/shop", label: "Shop" },
               { href: "/care", label: "Care" },
             ].map(({ href, label }) => (
               <Link
