@@ -4,10 +4,10 @@ import { useState } from "react";
 import { FadeIn, Label } from "@/components/ui";
 
 const FAQS = [
-  { q: "How long does a commission take?", a: "3–6 weeks depending on kiln scheduling and complexity. I'll keep you updated throughout." },
-  { q: "Can I see a sketch before you start?", a: "Yes! I'll confirm everything — dimensions, Hebrew text, glaze colors — before I begin." },
-  { q: "Are your pieces food safe?", a: "All pieces use food-safe, lead-free, cadmium-free glazes. Safe for oven and microwave." },
-  { q: "Do you ship internationally?", a: "Yes — Israel domestic and worldwide. Everything ships double-boxed. Full replacement if anything arrives damaged." },
+  { q: "How long does a commission take?", a: "I'll give you a timing estimate once we've talked through the piece. Kiln scheduling and complexity both factor in, and I'll keep you updated throughout." },
+  { q: "Will I see what you're making before you start?", a: "Yes — we'll lock in dimensions, personalization, and glaze together before I begin." },
+  { q: "Are your pieces food safe?", a: "All pieces use food-safe, lead-free, cadmium-free glazes. Microwave safe, and Shabbat-oven safe (intended for blech / Shabbat warming, not high-heat baking)." },
+  { q: "Do you ship internationally?", a: "Yes — I ship within Israel and internationally. Each piece is double-boxed for safe arrival. Reach out and I'll send you a shipping quote for your destination." },
   { q: "What payment methods do you accept?", a: "Israel: bit, PayBox, bank transfer. International: PayPal or Zelle." },
   { q: "Can I customize the Hebrew text?", a: "Family names, meaningful words, children's names, wedding dates — tell me what matters to you." },
 ];
@@ -32,7 +32,8 @@ export default function CarePage() {
         <div className="mb-20 grid grid-cols-1 gap-4 sm:grid-cols-2">
           {[
             ["Food Safe", "All pieces use food-safe, lead-free, cadmium-free glazes."],
-            ["Oven & Microwave", "Safe for both. Avoid sudden temperature changes."],
+            ["Shabbat Oven Safe", "Made for the blech and Shabbat warming setup. Not intended for high-heat baking."],
+            ["Microwave Safe", "Safe to reheat. Avoid sudden temperature changes."],
             ["Dishwasher", "Hand wash recommended for longevity."],
             ["Handle with Love", "Durable but not indestructible. Treat it well."],
           ].map(([title, desc], i) => (
@@ -112,24 +113,12 @@ export default function CarePage() {
             <h3 className="mb-5 font-heading text-[22px] font-normal text-text">
               Shipping
             </h3>
-            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-              <div>
-                <h4 className="mb-1.5 font-body text-[13px] font-semibold text-text">
-                  Israel Domestic
-                </h4>
-                <p className="font-body text-sm leading-relaxed text-text-mid">
-                  ₪25–45, 2–5 business days.
-                </p>
-              </div>
-              <div>
-                <h4 className="mb-1.5 font-body text-[13px] font-semibold text-text">
-                  International
-                </h4>
-                <p className="font-body text-sm leading-relaxed text-text-mid">
-                  $30–65, 3–14 days. Double-boxed with full breakage protection.
-                </p>
-              </div>
-            </div>
+            <p className="font-body text-sm leading-[1.7] text-text-mid">
+              I ship within Israel and internationally. Every piece is
+              double-boxed for safe arrival, and I&apos;ll happily replace
+              anything that doesn&apos;t make it intact. Reach out with your
+              destination and I&apos;ll send you a shipping quote.
+            </p>
           </div>
         </FadeIn>
       </div>
