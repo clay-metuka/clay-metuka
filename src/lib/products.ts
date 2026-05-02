@@ -139,8 +139,8 @@ export const products: Product[] = [
   {
     id: "6",
     slug: "tea-light-pair",
-    name: "Tea Light Pair",
-    hebrew: "פמוטות",
+    name: "Tea Light Holders",
+    hebrew: "מחזיקי נרות",
     description: "Pair of ceramic tea light holders for Shabbat candles",
     longDescription:
       "A matched pair of ceramic tea light holders with subtle texture and warmth. Designed to hold standard tea lights for Shabbat candle lighting.",
@@ -179,7 +179,7 @@ export const products: Product[] = [
     id: "9",
     slug: "espresso-cup",
     name: "Espresso Cup",
-    hebrew: "פינג'אן",
+    hebrew: "כוס אספרסו",
     description:
       "A small, sturdy espresso cup with a hamsa stamp — handmade for your morning ritual.",
     ritual:

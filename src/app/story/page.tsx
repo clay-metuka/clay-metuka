@@ -118,7 +118,7 @@ export default function StoryPage() {
         <div className="mx-auto max-w-[680px] px-6 text-center md:px-10">
           <FadeIn>
             <div className="mb-3 font-hebrew text-[32px] text-teal-light">
-              הידור מצווה
+              הידור מצוה
             </div>
             <h2 className="mb-6 font-heading text-[32px] font-light text-sand/85">
               Hiddur Mitzvah
