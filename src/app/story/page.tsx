@@ -1,5 +1,6 @@
 import Image from "next/image";
-import { FadeIn, Label, PlaceholderImage } from "@/components/ui";
+import { FadeIn, Label } from "@/components/ui";
+// TODO: re-add PlaceholderImage when Process section is restored
 
 export const metadata = { title: "My Story" };
 
@@ -70,7 +71,8 @@ export default function StoryPage() {
         </div>
       </section>
 
-      {/* Process — horizontal scroll */}
+      {/* TODO: restore when process photos are ready */}
+      {/*
       <section className="overflow-hidden bg-bg-white py-[100px]">
         <div className="mx-auto max-w-[1320px] px-6 md:px-10">
           <FadeIn>
@@ -112,6 +114,7 @@ export default function StoryPage() {
           </div>
         </div>
       </section>
+      */}
 
       {/* Hiddur Mitzvah */}
       <section className="bg-text py-[100px]">
