@@ -140,18 +140,19 @@ export default function StoryPage() {
         <div className="mx-auto max-w-[680px] px-6 text-center md:px-10">
           <FadeIn>
             <Label className="mb-4">The Name</Label>
-            <div className="mb-6 flex items-baseline justify-center gap-0.5">
-              <span className="font-hebrew text-[44px] font-bold text-terra">
-                כ
-              </span>
-              <span className="font-heading text-[38px] font-light text-text">
-                lay Metuka
-              </span>
+            <div className="mb-6 flex justify-center">
+              <Image
+                src="/images/logo.png"
+                alt="Clay Metuka seal"
+                width={140}
+                height={140}
+                className="h-[140px] w-[140px] object-contain"
+              />
             </div>
             <p className="font-body text-base leading-[1.75] text-text-mid">
               <em>Clay</em> is the material. <em>Kli</em> (כלי) is Hebrew for
-              vessel. The backwards Caf becomes the C — a quiet nod to both
-              languages. And <em>Metuka</em> means sweet.
+              vessel — a quiet nod to both languages. And <em>Metuka</em> means
+              sweet.
             </p>
           </FadeIn>
         </div>
