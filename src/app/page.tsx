@@ -205,7 +205,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ═══ WHATSAPP CTA ═══ */}
+      {/* TODO: re-add when WhatsApp group is live */}
+      {/*
       <section className="bg-bg-alt py-[100px]">
         <div className="mx-auto max-w-[580px] px-6 text-center md:px-10">
           <FadeIn>
@@ -229,6 +230,7 @@ export default function HomePage() {
           </FadeIn>
         </div>
       </section>
+      */}
     </>
   );
 }
