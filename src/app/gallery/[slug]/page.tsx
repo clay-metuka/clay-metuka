@@ -59,7 +59,7 @@ export default async function ProductPage({
 
               {/* Badges */}
               <div className="mb-7 flex flex-wrap gap-4">
-                {["Food Safe", "Oven Safe", "Microwave Safe", "Handmade"].map(
+                {["Food Safe", "Shabbat Oven Safe", "Microwave Safe", "Handmade"].map(
                   (badge) => (
                     <span
                       key={badge}

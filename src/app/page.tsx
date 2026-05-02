@@ -194,7 +194,8 @@ export default function HomePage() {
               <p className="mb-7 font-body text-base leading-[1.75] text-text-mid">
                 I&apos;m Metuka — an Israeli artist and mother of three. I shape
                 clay into vessels for Jewish ritual and daily life. Every piece
-                is food safe, oven safe, and made to be used — not just admired.
+                is food safe, Shabbat-oven safe, and made to be used — not just
+                admired.
               </p>
 
               <Button href="/story" outline>

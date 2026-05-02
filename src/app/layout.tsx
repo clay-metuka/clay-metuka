@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     template: "%s | Clay Metuka",
   },
   description:
-    "Handmade ceramic vessels for Jewish life — natla, kli sheni, Shabbat trays, kiddush cups, and more. Food safe, oven safe, shaped with love in Israel.",
+    "Handmade ceramic vessels for Jewish life — natla, kli sheni, Shabbat trays, kiddush cups, and more. Food safe, Shabbat-oven safe, shaped with love in Israel.",
   keywords: [
     "handmade pottery",
     "Jewish ritual objects",

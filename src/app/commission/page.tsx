@@ -33,11 +33,11 @@ export default function CommissionPage() {
                 ],
                 [
                   "We'll talk through the details",
-                  "I'll send a sketch and confirm everything before I begin.",
+                  "Dimensions, personalization, glaze — we'll lock everything in together before I start.",
                 ],
                 [
                   "I'll create your piece",
-                  "3–6 weeks depending on complexity and kiln scheduling.",
+                  "I'll give you a timing estimate once we've talked through the piece.",
                 ],
                 [
                   "Your piece arrives",
