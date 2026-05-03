@@ -16,12 +16,12 @@ export default function HomePage() {
           sizes="100vw"
           className="object-cover object-[center_55%] md:object-[center_60%]"
         />
-        {/* Mobile gradient: bottom-up (text sits at items-end) + thin top sky-dim */}
+        {/* Mobile gradient: bottom-up (text sits at items-end) + extended top sky-dim for label legibility */}
         <div
           className="pointer-events-none absolute inset-0 md:hidden"
           style={{
             background:
-              "linear-gradient(to top, rgba(44,40,37,0.88) 0%, rgba(44,40,37,0.58) 25%, rgba(44,40,37,0.15) 55%, rgba(44,40,37,0) 80%), linear-gradient(to bottom, rgba(44,40,37,0.3) 0%, rgba(44,40,37,0) 30%)",
+              "linear-gradient(to top, rgba(44,40,37,0.88) 0%, rgba(44,40,37,0.58) 25%, rgba(44,40,37,0.15) 55%, rgba(44,40,37,0) 80%), linear-gradient(to bottom, rgba(44,40,37,0.4) 0%, rgba(44,40,37,0) 50%)",
           }}
         />
         {/* Desktop gradient: horizontal dark-left + top sky-darkener */}
@@ -79,11 +79,11 @@ export default function HomePage() {
       </section>
 
       {/* ═══ FEATURED PIECES — asymmetric grid ═══ */}
-      <section className="bg-bg py-[120px]">
+      <section className="bg-bg py-16 md:py-[120px]">
         <div className="mx-auto max-w-[1320px] px-6 md:px-10">
           <FadeIn>
             <Label>Featured Work</Label>
-            <h2 className="mt-3 mb-[60px] font-heading text-[clamp(32px,4vw,48px)] font-light text-text">
+            <h2 className="mt-3 mb-10 font-heading text-[clamp(32px,4vw,48px)] font-light text-text md:mb-[60px]">
               Pieces shaped for your table
             </h2>
           </FadeIn>
@@ -169,7 +169,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          <FadeIn className="mt-[60px] text-center">
+          <FadeIn className="mt-10 text-center md:mt-[60px]">
             <Button href="/gallery" outline>
               View All Work <ArrowIcon />
             </Button>
@@ -179,8 +179,8 @@ export default function HomePage() {
 
       {/* ═══ BRAND STORY + embedded quote ═══ */}
       <section className="bg-bg-white">
-        <div className="grid min-h-[560px] grid-cols-1 md:grid-cols-[5fr_4fr]">
-          <div className="relative min-h-[400px] md:min-h-[560px]">
+        <div className="grid grid-cols-1 md:min-h-[560px] md:grid-cols-[5fr_4fr]">
+          <div className="relative min-h-[280px] md:min-h-[560px]">
             <Image
               src="/images/metuka-about.jpeg"
               alt="Metuka in her studio"
@@ -189,11 +189,11 @@ export default function HomePage() {
               className="object-cover"
             />
           </div>
-          <div className="flex flex-col justify-center px-6 py-16 md:px-[72px] md:py-20">
+          <div className="flex flex-col justify-center px-6 py-12 md:px-[72px] md:py-20">
             <FadeIn>
               <Label>The Maker</Label>
               <h2 className="mt-3 mb-6 font-heading text-[clamp(28px,3.5vw,42px)] font-light leading-[1.15] text-text">
-                Every piece begins
+                Every piece begins{" "}
                 <br className="hidden md:block" />
                 with a conversation
               </h2>

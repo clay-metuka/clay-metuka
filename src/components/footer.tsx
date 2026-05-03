@@ -3,9 +3,9 @@ import Image from "next/image";
 
 export function Footer() {
   return (
-    <footer className="bg-text pt-20 pb-10">
+    <footer className="bg-text pt-12 pb-8 md:pt-20 md:pb-10">
       <div className="mx-auto max-w-[1320px] px-6 md:px-10">
-        <div className="mb-16 grid grid-cols-1 gap-12 md:grid-cols-3 md:gap-16">
+        <div className="mb-10 grid grid-cols-1 gap-8 md:mb-16 md:grid-cols-3 md:gap-16">
           {/* Brand */}
           <div>
             <Image
@@ -78,8 +78,8 @@ export function Footer() {
             ))}
           </div>
 
-          {/* Connect */}
-          <div>
+          {/* Connect — hidden on mobile (FAB is the implicit action; no tappable button on mobile) */}
+          <div className="hidden md:block">
             <div className="mb-5 font-body text-[10px] font-semibold uppercase tracking-[3px] text-teal-muted">
               Connect
             </div>
@@ -98,8 +98,8 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Bottom */}
-        <div className="flex items-center justify-between border-t border-white/5 pt-6">
+        {/* Bottom — stack on mobile (cleaner) and pad-right at sm+ to clear the WhatsApp FAB */}
+        <div className="flex flex-col items-start gap-3 border-t border-white/5 pt-6 sm:flex-row sm:items-center sm:justify-between sm:gap-0 sm:pr-20 lg:pr-0">
           <span className="font-body text-xs text-sand/70">
             Made with love in Israel
           </span>
