@@ -43,7 +43,7 @@ export default async function ProductPage({
           <div className="pt-2">
             <FadeIn>
               <Label>{product.category}</Label>
-              <h1 className="mt-2 font-heading text-5xl font-light text-text">
+              <h1 className="mt-2 font-heading text-[clamp(32px,5vw,48px)] font-light text-text">
                 {product.name}
               </h1>
               <He className="mt-1 mb-5 block text-[22px] text-teal-muted">

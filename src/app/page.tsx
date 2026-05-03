@@ -6,7 +6,7 @@ export default function HomePage() {
   return (
     <>
       {/* ═══ HERO — full-width image with gradient overlay ═══ */}
-      <section className="relative h-[50vh] min-h-[420px] w-full overflow-hidden md:h-[78vh] md:min-h-[620px]">
+      <section className="relative h-[50vh] min-h-[560px] w-full overflow-hidden md:h-[78vh] md:min-h-[620px]">
         {/* Background image — portrait, focal area is hands + botanical tray */}
         <Image
           src="/images/metuka-tray.jpeg"
@@ -14,11 +14,19 @@ export default function HomePage() {
           fill
           priority
           sizes="100vw"
-          className="object-cover md:object-[center_60%]"
+          className="object-cover object-[center_55%] md:object-[center_60%]"
         />
-        {/* Gradient overlay: horizontal dark-left + top sky-darkener */}
+        {/* Mobile gradient: bottom-up (text sits at items-end) + thin top sky-dim */}
         <div
-          className="pointer-events-none absolute inset-0"
+          className="pointer-events-none absolute inset-0 md:hidden"
+          style={{
+            background:
+              "linear-gradient(to top, rgba(44,40,37,0.88) 0%, rgba(44,40,37,0.58) 25%, rgba(44,40,37,0.15) 55%, rgba(44,40,37,0) 80%), linear-gradient(to bottom, rgba(44,40,37,0.3) 0%, rgba(44,40,37,0) 30%)",
+          }}
+        />
+        {/* Desktop gradient: horizontal dark-left + top sky-darkener */}
+        <div
+          className="pointer-events-none absolute inset-0 hidden md:block"
           style={{
             background:
               "linear-gradient(to right, rgba(44,40,37,0.92) 0%, rgba(44,40,37,0.78) 28%, rgba(44,40,37,0.38) 55%, rgba(44,40,37,0.08) 100%), linear-gradient(to bottom, rgba(44,40,37,0.5) 0%, rgba(44,40,37,0.15) 30%, rgba(44,40,37,0) 50%)",
@@ -26,7 +34,7 @@ export default function HomePage() {
         />
 
         {/* Content */}
-        <div className="relative z-10 flex h-full items-end pt-[100px] pb-14 md:items-center md:pt-0 md:pb-0">
+        <div className="relative z-10 flex h-full items-end pt-[80px] pb-10 md:items-center md:pt-0 md:pb-0">
           <div className="mx-auto w-full max-w-[1320px] px-6 pl-8 md:px-10 md:pl-16">
             <div className="max-w-full md:max-w-[50%]">
               <FadeIn>
@@ -47,8 +55,7 @@ export default function HomePage() {
 
               <FadeIn delay={0.2}>
                 <p className="mb-10 max-w-[400px] font-body text-[17px] leading-[1.75] text-sand/75">
-                  Ceramic vessels for Jewish life — shaped by hand, meant to be
-                  used, made to be cherished.
+                  Ceramic vessels for Jewish life. Made to be used.
                 </p>
               </FadeIn>
 

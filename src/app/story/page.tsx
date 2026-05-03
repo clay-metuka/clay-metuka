@@ -20,13 +20,6 @@ export default function StoryPage() {
         </div>
         <div className="flex flex-col justify-center bg-bg-white px-6 py-16 md:px-[72px] md:py-24">
           <FadeIn>
-            <Image
-              src="/images/logo.png"
-              alt="Clay Metuka"
-              width={88}
-              height={88}
-              className="mb-6 rounded-full"
-            />
             <Label>My Story</Label>
             <h1 className="mt-3 mb-8 font-heading text-[clamp(36px,4.5vw,56px)] font-light leading-[1.1] text-text">
               Hi, I&apos;m Metuka

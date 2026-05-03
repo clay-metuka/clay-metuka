@@ -58,7 +58,7 @@ export default function GalleryPage() {
         </FadeIn>
 
         {/* Product grid */}
-        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-3">
           {filtered.map((product, i) => (
             <FadeIn key={product.id} delay={i * 0.06}>
               <Link
@@ -79,11 +79,11 @@ export default function GalleryPage() {
                   )}
                 </div>
                 <div className="px-0.5 pt-3.5">
-                  <div className="flex items-baseline justify-between">
-                    <h3 className="font-heading text-[19px] font-normal text-text">
+                  <div className="flex flex-col gap-0.5 sm:flex-row sm:items-baseline sm:justify-between">
+                    <h3 className="font-heading text-[16px] font-normal text-text sm:text-[19px]">
                       {product.name}
                     </h3>
-                    <span className="font-heading text-[17px] text-text-mid">
+                    <span className="font-heading text-[15px] text-text-mid sm:text-[17px]">
                       {product.price}
                     </span>
                   </div>
