@@ -63,6 +63,13 @@ select:focus {
   box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-terra) 8%, transparent);
 }
 
+/* Focus-visible fallback for raw <a> links (Button has its own) */
+a:focus-visible {
+  outline: 2px solid var(--color-terra);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
 /* ═══ Scrollbar hide for horizontal scrolls ═══ */
 .scrollbar-none::-webkit-scrollbar {
   display: none;

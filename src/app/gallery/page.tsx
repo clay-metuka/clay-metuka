@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { products, categories } from "@/lib/products";
-import { FadeIn, Label, PlaceholderImage } from "@/components/ui";
+import { FadeIn, Label, PlaceholderImage, He } from "@/components/ui";
 
 export default function GalleryPage() {
   const [filter, setFilter] = useState("all");
@@ -34,6 +34,7 @@ export default function GalleryPage() {
             <button
               key={cat}
               onClick={() => setFilter(cat)}
+              aria-pressed={filter === cat}
               className="cursor-pointer rounded-full border px-5 py-2 font-body text-xs capitalize tracking-[0.5px] transition-all duration-250"
               style={{
                 borderColor:
@@ -79,16 +80,16 @@ export default function GalleryPage() {
                 </div>
                 <div className="px-0.5 pt-3.5">
                   <div className="flex items-baseline justify-between">
-                    <span className="font-heading text-[19px] text-text">
+                    <h3 className="font-heading text-[19px] font-normal text-text">
                       {product.name}
-                    </span>
+                    </h3>
                     <span className="font-heading text-[17px] text-text-mid">
                       {product.price}
                     </span>
                   </div>
-                  <span className="font-hebrew text-[13px] text-teal-muted">
+                  <He className="text-[13px] text-teal-muted">
                     {product.hebrew}
-                  </span>
+                  </He>
                 </div>
               </Link>
             </FadeIn>

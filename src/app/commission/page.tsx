@@ -120,10 +120,11 @@ export default function CommissionPage() {
 
               <form className="flex flex-col gap-5" onSubmit={handleSubmit}>
                 <div>
-                  <label className="mb-1.5 block font-body text-xs font-semibold tracking-[0.5px] text-text">
+                  <label htmlFor="cm-name" className="mb-1.5 block font-body text-xs font-semibold tracking-[0.5px] text-text">
                     Name *
                   </label>
                   <input
+                    id="cm-name"
                     type="text"
                     name="name"
                     placeholder="Your full name"
@@ -133,10 +134,11 @@ export default function CommissionPage() {
                 </div>
 
                 <div>
-                  <label className="mb-1.5 block font-body text-xs font-semibold tracking-[0.5px] text-text">
+                  <label htmlFor="cm-email" className="mb-1.5 block font-body text-xs font-semibold tracking-[0.5px] text-text">
                     Email *
                   </label>
                   <input
+                    id="cm-email"
                     type="email"
                     name="email"
                     placeholder="you@email.com"
@@ -146,10 +148,11 @@ export default function CommissionPage() {
                 </div>
 
                 <div>
-                  <label className="mb-1.5 block font-body text-xs font-semibold tracking-[0.5px] text-text">
+                  <label htmlFor="cm-phone" className="mb-1.5 block font-body text-xs font-semibold tracking-[0.5px] text-text">
                     Phone / WhatsApp
                   </label>
                   <input
+                    id="cm-phone"
                     type="tel"
                     name="phone"
                     placeholder="+972..."
@@ -158,10 +161,11 @@ export default function CommissionPage() {
                 </div>
 
                 <div>
-                  <label className="mb-1.5 block font-body text-xs font-semibold tracking-[0.5px] text-text">
+                  <label htmlFor="cm-looking-for" className="mb-1.5 block font-body text-xs font-semibold tracking-[0.5px] text-text">
                     What are you looking for? *
                   </label>
                   <textarea
+                    id="cm-looking-for"
                     name="looking_for"
                     placeholder="A natla with my family name in Hebrew..."
                     rows={3}
@@ -172,10 +176,11 @@ export default function CommissionPage() {
 
                 <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                   <div>
-                    <label className="mb-1.5 block font-body text-xs font-semibold text-text">
+                    <label htmlFor="cm-occasion" className="mb-1.5 block font-body text-xs font-semibold text-text">
                       Occasion
                     </label>
                     <select
+                      id="cm-occasion"
                       name="occasion"
                       defaultValue=""
                       className={`${inputClass} text-text-mid`}
@@ -196,10 +201,10 @@ export default function CommissionPage() {
                     </select>
                   </div>
                   <div>
-                    <label className="mb-1.5 block font-body text-xs font-semibold text-text">
+                    <label htmlFor="cm-timeline" className="mb-1.5 block font-body text-xs font-semibold text-text">
                       Timeline
                     </label>
-                    <select name="timeline" className={`${inputClass} text-text-mid`}>
+                    <select id="cm-timeline" name="timeline" className={`${inputClass} text-text-mid`}>
                       {[
                         "No rush",
                         "Within 1 month",
@@ -214,22 +219,24 @@ export default function CommissionPage() {
 
                 <div className="flex items-center gap-2.5">
                   <input
+                    id="cm-gift"
                     type="checkbox"
                     checked={isGift}
                     onChange={() => setIsGift(!isGift)}
                     className="h-4 w-4 accent-terra"
                   />
-                  <span className="font-body text-sm text-text">
+                  <label htmlFor="cm-gift" className="cursor-pointer font-body text-sm text-text">
                     This is a gift
-                  </span>
+                  </label>
                 </div>
 
                 {isGift && (
                   <div>
-                    <label className="mb-1.5 block font-body text-xs font-semibold text-text">
+                    <label htmlFor="cm-gift-message" className="mb-1.5 block font-body text-xs font-semibold text-text">
                       Gift message
                     </label>
                     <textarea
+                      id="cm-gift-message"
                       name="gift_message"
                       placeholder="What should the card say?"
                       rows={2}
@@ -238,7 +245,7 @@ export default function CommissionPage() {
                   </div>
                 )}
 
-                <Button className="mt-1 w-full justify-center">
+                <Button type="submit" className="mt-1 w-full justify-center">
                   Send Request <ArrowIcon />
                 </Button>
               </form>

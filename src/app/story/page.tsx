@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { FadeIn, Label } from "@/components/ui";
+import { FadeIn, Label, He } from "@/components/ui";
 // TODO: re-add PlaceholderImage when Process section is restored
 
 export const metadata = { title: "My Story" };
@@ -120,9 +120,9 @@ export default function StoryPage() {
       <section className="bg-text py-[100px]">
         <div className="mx-auto max-w-[680px] px-6 text-center md:px-10">
           <FadeIn>
-            <div className="mb-3 font-hebrew text-[32px] text-teal-light">
+            <He className="mb-3 block text-[32px] text-teal-light">
               הידור מצוה
-            </div>
+            </He>
             <h2 className="mb-6 font-heading text-[32px] font-light text-sand/85">
               Hiddur Mitzvah
             </h2>
@@ -149,12 +149,11 @@ export default function StoryPage() {
                 className="h-[140px] w-[140px] object-contain"
               />
             </div>
-            <div className="mb-5 font-hebrew text-[32px] text-terra">
+            <He className="mb-5 block text-[32px] text-terra">
               כלי מתוקה
-            </div>
+            </He>
             <p className="font-body text-base leading-[1.75] text-text-mid">
-              In Hebrew, it&apos;s{" "}
-              <span className="font-hebrew">כלי מתוקה</span> —{" "}
+              In Hebrew, it&apos;s <He>כלי מתוקה</He> —{" "}
               <em>Metuka</em>&apos;s vessels. <em>Kli</em> means vessel.{" "}
               <em>Metuka</em> is my name, and also the word for sweet.{" "}
               <em>Clay</em> carries it across in English — it sounds like{" "}

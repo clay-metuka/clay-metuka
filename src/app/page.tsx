@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { FadeIn, Label, Button, ArrowIcon } from "@/components/ui";
+import { FadeIn, Label, Button, ArrowIcon, He } from "@/components/ui";
 
 export default function HomePage() {
   return (
@@ -95,12 +95,12 @@ export default function HomePage() {
                   />
                 </div>
                 <div className="px-1 pt-3.5">
-                  <span className="font-heading text-[22px] text-text">
+                  <h3 className="font-heading text-[22px] font-normal text-text">
                     Kli Sheni
-                  </span>
-                  <span className="ml-2.5 font-hebrew text-[15px] text-teal-muted">
-                    כלי שני
-                  </span>
+                    <He className="ml-2.5 text-[15px] text-teal-muted">
+                      כלי שני
+                    </He>
+                  </h3>
                   <p className="mt-1 font-body text-[13px] text-text-light">
                     Shabbat hot water vessel
                   </p>
@@ -122,12 +122,12 @@ export default function HomePage() {
                     />
                   </div>
                   <div className="px-1 pt-3.5">
-                    <span className="font-heading text-[22px] text-text">
+                    <h3 className="font-heading text-[22px] font-normal text-text">
                       Servingware
-                    </span>
-                    <span className="ml-2.5 font-hebrew text-[15px] text-teal-muted">
-                      כלי הגשה
-                    </span>
+                      <He className="ml-2.5 text-[15px] text-teal-muted">
+                        כלי הגשה
+                      </He>
+                    </h3>
                     <p className="mt-1 font-body text-[13px] text-text-light">
                       Handmade serving tray
                     </p>
@@ -147,12 +147,12 @@ export default function HomePage() {
                     />
                   </div>
                   <div className="px-1 pt-3.5">
-                    <span className="font-heading text-[22px] text-text">
+                    <h3 className="font-heading text-[22px] font-normal text-text">
                       Ceramic Mug
-                    </span>
-                    <span className="ml-2.5 font-hebrew text-[15px] text-teal-muted">
-                      ספל
-                    </span>
+                      <He className="ml-2.5 text-[15px] text-teal-muted">
+                        ספל
+                      </He>
+                    </h3>
                     <p className="mt-1 font-body text-[13px] text-text-light">
                       Teal glaze, botanical carving
                     </p>

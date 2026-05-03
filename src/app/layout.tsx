@@ -53,8 +53,14 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-screen bg-bg font-body text-text">
+        <a
+          href="#main"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded focus:bg-bg focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-terra focus:outline-2 focus:outline-terra"
+        >
+          Skip to content
+        </a>
         <Nav />
-        <main>{children}</main>
+        <main id="main">{children}</main>
         <Footer />
         <WhatsAppFAB />
       </body>

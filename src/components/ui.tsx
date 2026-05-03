@@ -49,6 +49,21 @@ export function FadeIn({
   );
 }
 
+/* ═══ HEBREW WRAPPER — semantic lang + dir ═══ */
+export function He({
+  children,
+  className = "",
+}: {
+  children: ReactNode;
+  className?: string;
+}) {
+  return (
+    <span lang="he" dir="rtl" className={`font-hebrew ${className}`}>
+      {children}
+    </span>
+  );
+}
+
 /* ═══ SECTION LABEL — teal, uppercase, tracked ═══ */
 export function Label({
   children,
@@ -73,15 +88,17 @@ export function Button({
   outline = false,
   className = "",
   href,
+  type = "button",
 }: {
   children: ReactNode;
   onClick?: () => void;
   outline?: boolean;
   className?: string;
   href?: string;
+  type?: "button" | "submit" | "reset";
 }) {
   const base =
-    "inline-flex items-center gap-2 rounded-[4px] font-body text-[13px] font-semibold tracking-[0.3px] cursor-pointer transition-all duration-300";
+    "inline-flex items-center gap-2 rounded-[4px] font-body text-[13px] font-semibold tracking-[0.3px] cursor-pointer transition-all duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-terra";
   const filled = "bg-terra text-bg px-8 py-3.5 border-none hover:bg-terra-dark";
   const outlineStyle =
     "bg-transparent text-terra border-[1.5px] border-terra px-[30px] py-[13px] hover:bg-terra hover:text-bg";
@@ -99,6 +116,7 @@ export function Button({
 
   return (
     <button
+      type={type}
       onClick={onClick}
       className={`${base} ${outline ? outlineStyle : filled} ${className}`}
     >

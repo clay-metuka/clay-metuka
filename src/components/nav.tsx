@@ -106,7 +106,9 @@ export function Nav() {
           {/* Mobile hamburger */}
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className="flex cursor-pointer items-center justify-center border-none bg-transparent md:hidden"
+            aria-label={menuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={menuOpen}
+            className="flex h-11 w-11 cursor-pointer items-center justify-center border-none bg-transparent md:hidden"
             style={{ color: light ? "#F5F0EA" : "var(--color-text)" }}
           >
             {menuOpen ? (

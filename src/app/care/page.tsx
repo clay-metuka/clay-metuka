@@ -28,6 +28,14 @@ export default function CarePage() {
           </p>
         </FadeIn>
 
+        {/* Care basics */}
+        <FadeIn>
+          <Label className="mb-3">Care Basics</Label>
+          <h2 className="mb-8 font-heading text-[32px] font-light text-text">
+            Made to be used.
+          </h2>
+        </FadeIn>
+
         {/* Care cards */}
         <div className="mb-20 grid auto-rows-fr grid-cols-2 gap-4 lg:grid-cols-4">
           {[
@@ -74,6 +82,8 @@ export default function CarePage() {
               >
                 <button
                   onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                  aria-expanded={openFaq === i}
+                  aria-controls={`faq-panel-${i}`}
                   className="flex w-full cursor-pointer items-center justify-between bg-transparent px-6 py-[18px] text-left"
                 >
                   <span className="font-body text-[15px] font-medium text-text">
@@ -97,7 +107,11 @@ export default function CarePage() {
                   </svg>
                 </button>
                 {openFaq === i && (
-                  <div className="px-6 pb-[18px] font-body text-sm leading-[1.7] text-text-mid">
+                  <div
+                    id={`faq-panel-${i}`}
+                    role="region"
+                    className="px-6 pb-[18px] font-body text-sm leading-[1.7] text-text-mid"
+                  >
                     {faq.a}
                   </div>
                 )}
@@ -109,9 +123,9 @@ export default function CarePage() {
         {/* Shipping */}
         <FadeIn>
           <div className="rounded border border-teal/[0.07] bg-teal-muted/[0.03] p-9">
-            <h3 className="mb-5 font-heading text-[22px] font-normal text-text">
+            <h2 className="mb-5 font-heading text-[22px] font-normal text-text">
               Shipping
-            </h3>
+            </h2>
             <p className="font-body text-sm leading-[1.7] text-text-mid">
               I ship within Israel and internationally. Every piece is
               double-boxed for safe arrival, and I&apos;ll happily replace
