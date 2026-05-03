@@ -149,10 +149,16 @@ export default function StoryPage() {
                 className="h-[140px] w-[140px] object-contain"
               />
             </div>
+            <div className="mb-5 font-hebrew text-[32px] text-terra">
+              כלי מתוקה
+            </div>
             <p className="font-body text-base leading-[1.75] text-text-mid">
-              <em>Clay</em> is the material. <em>Kli</em> (כלי) is Hebrew for
-              vessel — a quiet nod to both languages. And <em>Metuka</em> means
-              sweet.
+              In Hebrew, it&apos;s{" "}
+              <span className="font-hebrew">כלי מתוקה</span> —{" "}
+              <em>Metuka</em>&apos;s vessels. <em>Kli</em> means vessel.{" "}
+              <em>Metuka</em> is my name, and also the word for sweet.{" "}
+              <em>Clay</em> carries it across in English — it sounds like{" "}
+              <em>kli</em>, and it&apos;s the material itself.
             </p>
           </FadeIn>
         </div>
