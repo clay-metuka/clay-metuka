@@ -36,7 +36,7 @@ export default function HomePage() {
               </FadeIn>
 
               <FadeIn delay={0.1}>
-                <h1 className="mb-7 font-heading text-[clamp(44px,6vw,72px)] font-light leading-[1.05] tracking-[-0.02em] text-[#F5F0EA]">
+                <h1 className="mb-7 font-heading text-[clamp(44px,6vw,72px)] font-light leading-[1.05] tracking-[-0.02em] text-bg">
                   Ritual.
                   <br />
                   Rooted.

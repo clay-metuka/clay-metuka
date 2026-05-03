@@ -126,7 +126,7 @@ export default function StoryPage() {
             <h2 className="mb-6 font-heading text-[32px] font-light text-sand/85">
               Hiddur Mitzvah
             </h2>
-            <p className="font-body text-base leading-[1.8] text-sand/50">
+            <p className="font-body text-base leading-[1.8] text-sand/75">
               The concept of beautifying the commandments. A handmade vessel for
               washing hands before bread isn&apos;t just functional — it turns a
               daily act into a moment of meaning.

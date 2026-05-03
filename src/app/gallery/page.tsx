@@ -39,15 +39,15 @@ export default function GalleryPage() {
               style={{
                 borderColor:
                   filter === cat
-                    ? "var(--color-teal-muted)"
+                    ? "var(--color-terra)"
                     : "var(--color-border)",
                 background:
                   filter === cat
-                    ? "color-mix(in srgb, var(--color-teal-muted) 5%, transparent)"
+                    ? "color-mix(in srgb, var(--color-terra) 6%, transparent)"
                     : "transparent",
                 color:
                   filter === cat
-                    ? "var(--color-teal-muted)"
+                    ? "var(--color-terra)"
                     : "var(--color-text-mid)",
                 fontWeight: filter === cat ? 600 : 400,
               }}
