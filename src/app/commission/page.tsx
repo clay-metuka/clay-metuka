@@ -3,11 +3,45 @@
 import { useState } from "react";
 import { FadeIn, Label, Button, ArrowIcon } from "@/components/ui";
 
+const COMMISSION_EMAIL = "metuka.hechtman@gmail.com";
+
 export default function CommissionPage() {
   const [isGift, setIsGift] = useState(false);
 
   const inputClass =
     "w-full rounded border border-border bg-bg px-4 py-3 font-body text-sm text-text outline-none transition-all";
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const data = new FormData(e.currentTarget);
+    const get = (key: string) => (data.get(key) as string | null)?.trim() ?? "";
+
+    const name = get("name");
+    const fields: Array<[string, string]> = [
+      ["Name", name],
+      ["Email", get("email")],
+      ["Phone / WhatsApp", get("phone")],
+      ["What you're looking for", get("looking_for")],
+      ["Occasion", get("occasion")],
+      ["Timeline", get("timeline")],
+    ];
+    if (isGift) {
+      fields.push(["Gift", "Yes"]);
+      fields.push(["Gift message", get("gift_message")]);
+    }
+
+    const body = fields
+      .filter(([, v]) => v.length > 0)
+      .map(([k, v]) => `${k}: ${v}`)
+      .join("\n");
+    const subject = name
+      ? `Commission inquiry from ${name}`
+      : "Commission inquiry";
+
+    window.location.href = `mailto:${COMMISSION_EMAIL}?subject=${encodeURIComponent(
+      subject
+    )}&body=${encodeURIComponent(body)}`;
+  };
 
   return (
     <div className="bg-bg py-16 pb-[120px]">
@@ -84,13 +118,14 @@ export default function CommissionPage() {
                 Commission Form
               </h2>
 
-              <form className="flex flex-col gap-5" onSubmit={(e) => e.preventDefault()}>
+              <form className="flex flex-col gap-5" onSubmit={handleSubmit}>
                 <div>
                   <label className="mb-1.5 block font-body text-xs font-semibold tracking-[0.5px] text-text">
                     Name *
                   </label>
                   <input
                     type="text"
+                    name="name"
                     placeholder="Your full name"
                     className={inputClass}
                     required
@@ -103,6 +138,7 @@ export default function CommissionPage() {
                   </label>
                   <input
                     type="email"
+                    name="email"
                     placeholder="you@email.com"
                     className={inputClass}
                     required
@@ -115,6 +151,7 @@ export default function CommissionPage() {
                   </label>
                   <input
                     type="tel"
+                    name="phone"
                     placeholder="+972..."
                     className={inputClass}
                   />
@@ -125,6 +162,7 @@ export default function CommissionPage() {
                     What are you looking for? *
                   </label>
                   <textarea
+                    name="looking_for"
                     placeholder="A natla with my family name in Hebrew..."
                     rows={3}
                     className={`${inputClass} resize-y`}
@@ -137,8 +175,12 @@ export default function CommissionPage() {
                     <label className="mb-1.5 block font-body text-xs font-semibold text-text">
                       Occasion
                     </label>
-                    <select className={`${inputClass} text-text-mid`}>
-                      <option>Select...</option>
+                    <select
+                      name="occasion"
+                      defaultValue=""
+                      className={`${inputClass} text-text-mid`}
+                    >
+                      <option value="">Select...</option>
                       {[
                         "Shabbat",
                         "Wedding",
@@ -157,7 +199,7 @@ export default function CommissionPage() {
                     <label className="mb-1.5 block font-body text-xs font-semibold text-text">
                       Timeline
                     </label>
-                    <select className={`${inputClass} text-text-mid`}>
+                    <select name="timeline" className={`${inputClass} text-text-mid`}>
                       {[
                         "No rush",
                         "Within 1 month",
@@ -188,6 +230,7 @@ export default function CommissionPage() {
                       Gift message
                     </label>
                     <textarea
+                      name="gift_message"
                       placeholder="What should the card say?"
                       rows={2}
                       className={`${inputClass} resize-y`}
