@@ -62,7 +62,7 @@ Added `tagline?: string` to Product type. All 8 visible products populated for c
 - **Kiddush Divider → Wine Pourer.** Hebrew מחלק קידוש → מחלק יין. Slug `kiddush-divider` → `wine-pourer`. Image folder already `wine_pourer/`.
 - **Tea Light Pair → Tea Light Holders.** Hebrew → מחזיקי נרות (was incorrect פמוטות = candlesticks).
 - **Espresso Cup description.** Dropped "with a hamsa stamp" — not universal across all espresso cups. New: "A small, sturdy espresso cup, handmade for your morning ritual."
-- **Hiddur Mitzvah Hebrew.** הוצמ רודיה → הוצמ רודיה (traditional defective spelling, single vav each word).
+- **Hiddur Mitzvah Hebrew.** הידור מצווה → הידור מצוה (traditional defective spelling, single vav each word).
 
 ### Gallery product order
 1. Natla, 2. Kli Sheni, 3. Servingware, 4. Challah Basket, 5. Wine Pourer, 6. Ceramic Mug, 7. Espresso Cup, 8. Tea Light Holders, 9. Kiddush Cup (hidden).
