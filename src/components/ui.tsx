@@ -20,6 +20,14 @@ export function FadeIn({
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
+
+    // Reduced-motion users: skip the scroll-trigger animation entirely.
+    // (CSS override in globals.css also collapses any leftover transitions to ~0ms.)
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      setVisible(true);
+      return;
+    }
+
     const obs = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
