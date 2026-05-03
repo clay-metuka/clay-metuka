@@ -3,3 +3,7 @@ node_modules
 .vercel
 .claude/
 tsconfig.tsbuildinfo
+
+# Vercel CLI auto-creates AGENTS.md with default best-practices on
+# first init; we maintain the same content in CLAUDE.md instead.
+AGENTS.md
