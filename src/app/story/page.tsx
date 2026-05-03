@@ -11,10 +11,10 @@ export default function StoryPage() {
       <section className="grid min-h-[80vh] grid-cols-1 md:grid-cols-2">
         <div className="relative min-h-[400px] md:min-h-[600px]">
           <Image
-            src="/images/metuka-studio.jpg"
-            alt="Metuka working with clay on her rooftop studio"
+            src="/images/metuka-tray.jpeg"
+            alt="Metuka engraving a botanical pattern on a clay tray"
             fill
-            className="object-cover"
+            className="object-cover object-[center_55%] md:object-[center_60%]"
             priority
           />
         </div>
@@ -146,11 +146,10 @@ export default function StoryPage() {
               כלי מתוקה
             </He>
             <p className="font-body text-base leading-[1.75] text-text-mid">
-              In Hebrew, it&apos;s <He>כלי מתוקה</He> —{" "}
-              <em>Metuka</em>&apos;s vessels. <em>Kli</em> means vessel.{" "}
-              <em>Metuka</em> is my name, and also the word for sweet.{" "}
-              <em>Clay</em> carries it across in English — it sounds like{" "}
-              <em>kli</em>, and it&apos;s the material itself.
+              The name means <em>Metuka</em>&apos;s vessels. <em>Kli</em> is
+              Hebrew for vessel. <em>Metuka</em> is my name, and also the
+              word for sweet. <em>Clay</em> carries it across in English — it
+              sounds like <em>kli</em>, and it&apos;s the material itself.
             </p>
           </FadeIn>
         </div>

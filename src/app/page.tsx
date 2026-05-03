@@ -7,14 +7,14 @@ export default function HomePage() {
     <>
       {/* ═══ HERO — full-width image with gradient overlay ═══ */}
       <section className="relative h-[50vh] min-h-[560px] w-full overflow-hidden md:h-[78vh] md:min-h-[620px]">
-        {/* Background image — portrait, focal area is hands + botanical tray */}
+        {/* Background image — square studio shot, focal area is Metuka engraving a botanical plate */}
         <Image
-          src="/images/metuka-tray.jpeg"
+          src="/images/metuka-studio.jpg"
           alt=""
           fill
           priority
           sizes="100vw"
-          className="object-cover object-[center_55%] md:object-[center_60%]"
+          className="object-cover object-[center_30%]"
         />
         {/* Mobile gradient: bottom-up (text sits at items-end) + extended top sky-dim for label legibility */}
         <div
