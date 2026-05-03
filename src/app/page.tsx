@@ -6,23 +6,22 @@ export default function HomePage() {
   return (
     <>
       {/* ═══ HERO — full-width image with gradient overlay ═══ */}
-      <section className="relative h-[50vh] min-h-[420px] w-full overflow-hidden md:h-[70vh] md:min-h-[560px]">
-        {/* Background image */}
+      <section className="relative h-[50vh] min-h-[420px] w-full overflow-hidden md:h-[78vh] md:min-h-[620px]">
+        {/* Background image — portrait, focal area is hands + botanical tray */}
         <Image
-          src="/images/products/espresso_cup/lifestyle.jpeg"
+          src="/images/metuka-tray.jpeg"
           alt=""
           fill
           priority
           sizes="100vw"
-          className="object-cover"
-          style={{ objectPosition: "center 95%" }}
+          className="object-cover md:object-[center_60%]"
         />
-        {/* Gradient overlay — dark left, clear right */}
+        {/* Gradient overlay: horizontal dark-left + top sky-darkener */}
         <div
           className="pointer-events-none absolute inset-0"
           style={{
             background:
-              "linear-gradient(to right, rgba(44,40,37,0.85) 0%, rgba(44,40,37,0.7) 30%, rgba(44,40,37,0.2) 60%, rgba(44,40,37,0.05) 100%)",
+              "linear-gradient(to right, rgba(44,40,37,0.92) 0%, rgba(44,40,37,0.78) 28%, rgba(44,40,37,0.38) 55%, rgba(44,40,37,0.08) 100%), linear-gradient(to bottom, rgba(44,40,37,0.5) 0%, rgba(44,40,37,0.15) 30%, rgba(44,40,37,0) 50%)",
           }}
         />
 
