@@ -29,16 +29,15 @@ export default function CarePage() {
         </FadeIn>
 
         {/* Care cards */}
-        <div className="mb-20 grid grid-cols-1 gap-4 sm:grid-cols-2">
+        <div className="mb-20 grid auto-rows-fr grid-cols-2 gap-4 lg:grid-cols-4">
           {[
             ["Food Safe", "All pieces use food-safe, lead-free, cadmium-free glazes."],
             ["Shabbat Oven Safe", "Made for the blech and Shabbat warming setup. Not intended for high-heat baking."],
             ["Microwave Safe", "Safe to reheat. Avoid sudden temperature changes."],
             ["Dishwasher", "Hand wash recommended for longevity."],
-            ["Handle with Love", "Durable but not indestructible. Treat it well."],
           ].map(([title, desc], i) => (
-            <FadeIn key={i} delay={i * 0.06}>
-              <div className="rounded border border-border bg-bg-white p-6">
+            <FadeIn key={i} delay={i * 0.06} className="h-full">
+              <div className="h-full rounded border border-border bg-bg-white p-6">
                 <div className="mb-2 flex items-center gap-2">
                   <svg width="12" height="12" viewBox="0 0 14 14" fill="none" stroke="var(--color-teal-muted)" strokeWidth="2" strokeLinecap="round"><path d="M2 7l3.5 3.5L12 4"/></svg>
                   <h3 className="font-body text-sm font-semibold text-text">
