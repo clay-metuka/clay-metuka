@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { products, categories } from "@/lib/products";
-import { FadeIn, Label, PlaceholderImage, He } from "@/components/ui";
+import { FadeIn, Label, PlaceholderImage } from "@/components/ui";
 
 export default function GalleryPage() {
   const [filter, setFilter] = useState("all");
@@ -57,44 +57,62 @@ export default function GalleryPage() {
           ))}
         </FadeIn>
 
-        {/* Product grid */}
-        <div className="grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-3">
-          {filtered.map((product, i) => (
-            <FadeIn key={product.id} delay={i * 0.06}>
+        {/* Product grid (or empty state if filter has no matches) */}
+        {filtered.length === 0 ? (
+          <FadeIn>
+            <p className="py-16 text-center font-body text-base leading-[1.7] text-text-mid md:py-20">
+              Nothing in this category yet.{" "}
               <Link
-                href={`/gallery/${product.slug}`}
-                className="group block transition-transform duration-400 hover:-translate-y-[3px]"
+                href="/commission"
+                className="text-terra underline-offset-4 hover:underline"
               >
-                <div className="img-zoom relative aspect-[4/5] overflow-hidden rounded-sm">
-                  {product.images[0] ? (
-                    <Image
-                      src={product.images[0]}
-                      alt={product.name}
-                      fill
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                      className="object-cover"
-                    />
-                  ) : (
-                    <PlaceholderImage aspect="4/5" label={product.name} />
-                  )}
-                </div>
-                <div className="px-0.5 pt-3.5">
-                  <div className="flex flex-col gap-0.5 sm:flex-row sm:items-baseline sm:justify-between">
-                    <h3 className="font-heading text-[16px] font-normal text-text sm:text-[19px]">
-                      {product.name}
-                    </h3>
-                    <span className="font-heading text-[15px] text-text-mid sm:text-[17px]">
-                      {product.price}
-                    </span>
-                  </div>
-                  <He className="text-[13px] text-teal-muted">
-                    {product.hebrew}
-                  </He>
-                </div>
+                Commissions are always open — tell me what you&apos;re looking for.
               </Link>
-            </FadeIn>
-          ))}
-        </div>
+            </p>
+          </FadeIn>
+        ) : (
+          <div className="grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-3">
+            {filtered.map((product, i) => (
+              <FadeIn key={product.id} delay={i * 0.06}>
+                <Link
+                  href={`/gallery/${product.slug}`}
+                  className="group block transition-transform duration-400 hover:-translate-y-[3px]"
+                >
+                  <div className="img-zoom relative aspect-[4/5] overflow-hidden rounded-sm">
+                    {product.images[0] ? (
+                      <Image
+                        src={product.images[0]}
+                        alt={product.name}
+                        fill
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        className="object-cover"
+                      />
+                    ) : (
+                      <PlaceholderImage aspect="4/5" label={product.name} />
+                    )}
+                  </div>
+                  <div className="px-0.5 pt-3.5">
+                    <h3
+                      lang="he"
+                      dir="rtl"
+                      className="font-hebrew text-[18px] font-normal text-text sm:text-[22px]"
+                    >
+                      {product.hebrew}
+                    </h3>
+                    <div className="mt-1 flex items-baseline justify-between gap-2">
+                      <p className="font-body text-[13px] italic text-text-mid sm:text-[14px]">
+                        {product.name}
+                      </p>
+                      <span className="font-heading text-[14px] text-text-mid sm:text-[16px]">
+                        {product.price}
+                      </span>
+                    </div>
+                  </div>
+                </Link>
+              </FadeIn>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );

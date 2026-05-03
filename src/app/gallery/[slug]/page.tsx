@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { products, getProduct } from "@/lib/products";
-import { FadeIn, Label, Button, ArrowIcon, He } from "@/components/ui";
+import { FadeIn, Label, Button, ArrowIcon } from "@/components/ui";
 import { ProductGallery } from "@/components/product-gallery";
 
 export function generateStaticParams() {
@@ -43,12 +43,16 @@ export default async function ProductPage({
           <div className="pt-2">
             <FadeIn>
               <Label>{product.category}</Label>
-              <h1 className="mt-2 font-heading text-[clamp(32px,5vw,48px)] font-light text-text">
-                {product.name}
-              </h1>
-              <He className="mt-1 mb-5 block text-[22px] text-teal-muted">
+              <h1
+                lang="he"
+                dir="rtl"
+                className="mt-2 font-hebrew text-[32px] font-normal text-text"
+              >
                 {product.hebrew}
-              </He>
+              </h1>
+              <p className="mb-5 font-body text-[18px] italic text-text-mid">
+                {product.name}
+              </p>
 
               {/* Divider */}
               <div className="mb-6 h-[1.5px] w-10 bg-terra" />

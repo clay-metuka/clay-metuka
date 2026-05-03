@@ -1,12 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
-import { FadeIn, Label, Button, ArrowIcon, He } from "@/components/ui";
+import { FadeIn, Label, Button, ArrowIcon } from "@/components/ui";
 
 export default function HomePage() {
   return (
     <>
       {/* ═══ HERO — full-width image with gradient overlay ═══ */}
-      <section className="relative h-[50vh] min-h-[560px] w-full overflow-hidden md:h-[78vh] md:min-h-[620px]">
+      <section className="relative h-[50vh] min-h-[640px] w-full overflow-hidden md:h-[78vh] md:min-h-[620px]">
         {/* Background image — square studio shot, focal area is Metuka engraving a botanical plate */}
         <Image
           src="/images/metuka-studio.jpg"
@@ -34,7 +34,7 @@ export default function HomePage() {
         />
 
         {/* Content */}
-        <div className="relative z-10 flex h-full items-end pt-[80px] pb-10 md:items-center md:pt-0 md:pb-0">
+        <div className="relative z-10 flex h-full items-end pt-[140px] pb-14 md:items-center md:pt-0 md:pb-0">
           <div className="mx-auto w-full max-w-[1320px] px-6 pl-8 md:px-10 md:pl-16">
             <div className="max-w-full md:max-w-[50%]">
               <FadeIn>
@@ -102,12 +102,16 @@ export default function HomePage() {
                   />
                 </div>
                 <div className="px-1 pt-3.5">
-                  <h3 className="font-heading text-[22px] font-normal text-text">
-                    Kli Sheni
-                    <He className="ml-2.5 text-[15px] text-teal-muted">
-                      כלי שני
-                    </He>
+                  <h3
+                    lang="he"
+                    dir="rtl"
+                    className="font-hebrew text-[24px] font-normal text-text"
+                  >
+                    כלי שני
                   </h3>
+                  <p className="mt-0.5 font-body text-[13px] italic text-text-mid">
+                    Kli Sheni
+                  </p>
                   <p className="mt-1 font-body text-[13px] text-text-light">
                     Shabbat hot water vessel
                   </p>
@@ -129,12 +133,16 @@ export default function HomePage() {
                     />
                   </div>
                   <div className="px-1 pt-3.5">
-                    <h3 className="font-heading text-[22px] font-normal text-text">
-                      Servingware
-                      <He className="ml-2.5 text-[15px] text-teal-muted">
-                        כלי הגשה
-                      </He>
+                    <h3
+                      lang="he"
+                      dir="rtl"
+                      className="font-hebrew text-[24px] font-normal text-text"
+                    >
+                      כלי הגשה
                     </h3>
+                    <p className="mt-0.5 font-body text-[13px] italic text-text-mid">
+                      Servingware
+                    </p>
                     <p className="mt-1 font-body text-[13px] text-text-light">
                       Handmade serving tray
                     </p>
@@ -154,12 +162,16 @@ export default function HomePage() {
                     />
                   </div>
                   <div className="px-1 pt-3.5">
-                    <h3 className="font-heading text-[22px] font-normal text-text">
-                      Ceramic Mug
-                      <He className="ml-2.5 text-[15px] text-teal-muted">
-                        ספל
-                      </He>
+                    <h3
+                      lang="he"
+                      dir="rtl"
+                      className="font-hebrew text-[24px] font-normal text-text"
+                    >
+                      ספל
                     </h3>
+                    <p className="mt-0.5 font-body text-[13px] italic text-text-mid">
+                      Ceramic Mug
+                    </p>
                     <p className="mt-1 font-body text-[13px] text-text-light">
                       Teal glaze, botanical carving
                     </p>
