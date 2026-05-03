@@ -69,8 +69,8 @@ export const products: Product[] = [
     category: "servingware",
     occasion: ["shabbat"],
     status: "commission",
-    price: "₪200",
-    priceUSD: "$54",
+    price: "From ₪250",
+    priceUSD: "From $70",
     size: "md",
     collection: "first-light",
     images: [
