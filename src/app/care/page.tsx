@@ -42,7 +42,7 @@ export default function CarePage() {
             ["Food Safe", "All pieces use food-safe, lead-free, cadmium-free glazes."],
             ["Shabbat Oven Safe", "Made for the blech and Shabbat warming setup. Not intended for high-heat baking."],
             ["Microwave Safe", "Safe to reheat. Avoid sudden temperature changes."],
-            ["Dishwasher", "Hand wash recommended for longevity."],
+            ["Dishwasher Safe", "Top rack works. Just let pieces cool before they meet cold water."],
           ].map(([title, desc], i) => (
             <FadeIn key={i} delay={i * 0.06} className="h-full">
               <div className="h-full rounded border border-border bg-bg-white p-6">

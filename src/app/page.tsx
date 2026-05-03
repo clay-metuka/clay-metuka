@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { FadeIn, Label, Button, ArrowIcon } from "@/components/ui";
+import { FeaturedCarousel } from "@/components/featured-carousel";
 
 export default function HomePage() {
   return (
@@ -78,116 +79,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ═══ FEATURED PIECES — asymmetric grid ═══ */}
-      <section className="bg-bg py-16 md:py-[120px]">
-        <div className="mx-auto max-w-[1320px] px-6 md:px-10">
-          <FadeIn>
-            <Label>Featured Work</Label>
-            <h2 className="mt-3 mb-10 font-heading text-[clamp(32px,4vw,48px)] font-light text-text md:mb-[60px]">
-              Pieces shaped for your table
-            </h2>
-          </FadeIn>
-
-          <div className="grid grid-cols-1 gap-5 md:grid-cols-[1.3fr_1fr]">
-            {/* Left — tall */}
-            <FadeIn>
-              <Link href="/gallery" className="group block">
-                <div className="img-zoom relative aspect-[3/4] overflow-hidden rounded-sm">
-                  <Image
-                    src="/images/products/kli_sheni/hero.jpeg"
-                    alt="Kli Sheni — כלי שני"
-                    fill
-                    sizes="(max-width: 768px) 100vw, 55vw"
-                    className="object-cover"
-                  />
-                </div>
-                <div className="px-1 pt-3.5">
-                  <h3
-                    lang="he"
-                    dir="rtl"
-                    className="font-hebrew text-[24px] font-normal text-text"
-                  >
-                    כלי שני
-                  </h3>
-                  <p className="mt-0.5 font-body text-[13px] italic text-text-mid">
-                    Kli Sheni
-                  </p>
-                  <p className="mt-1 font-body text-[13px] text-text-light">
-                    Shabbat hot water vessel
-                  </p>
-                </div>
-              </Link>
-            </FadeIn>
-
-            {/* Right — stacked */}
-            <div className="flex flex-col gap-5">
-              <FadeIn delay={0.1}>
-                <Link href="/gallery" className="group block">
-                  <div className="img-zoom relative aspect-[4/3] overflow-hidden rounded-sm">
-                    <Image
-                      src="/images/products/shabbat_tray/2-lifestyle.jpeg"
-                      alt="Servingware — כלי הגשה"
-                      fill
-                      sizes="(max-width: 768px) 100vw, 45vw"
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="px-1 pt-3.5">
-                    <h3
-                      lang="he"
-                      dir="rtl"
-                      className="font-hebrew text-[24px] font-normal text-text"
-                    >
-                      כלי הגשה
-                    </h3>
-                    <p className="mt-0.5 font-body text-[13px] italic text-text-mid">
-                      Servingware
-                    </p>
-                    <p className="mt-1 font-body text-[13px] text-text-light">
-                      Handmade serving tray
-                    </p>
-                  </div>
-                </Link>
-              </FadeIn>
-
-              <FadeIn delay={0.2}>
-                <Link href="/gallery" className="group block">
-                  <div className="img-zoom relative aspect-[4/3] overflow-hidden rounded-sm">
-                    <Image
-                      src="/images/products/mug/hero.jpeg"
-                      alt="Ceramic Mug — ספל"
-                      fill
-                      sizes="(max-width: 768px) 100vw, 45vw"
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="px-1 pt-3.5">
-                    <h3
-                      lang="he"
-                      dir="rtl"
-                      className="font-hebrew text-[24px] font-normal text-text"
-                    >
-                      ספל
-                    </h3>
-                    <p className="mt-0.5 font-body text-[13px] italic text-text-mid">
-                      Ceramic Mug
-                    </p>
-                    <p className="mt-1 font-body text-[13px] text-text-light">
-                      Teal glaze, botanical carving
-                    </p>
-                  </div>
-                </Link>
-              </FadeIn>
-            </div>
-          </div>
-
-          <FadeIn className="mt-10 text-center md:mt-[60px]">
-            <Button href="/gallery" outline>
-              View All Work <ArrowIcon />
-            </Button>
-          </FadeIn>
-        </div>
-      </section>
+      {/* ═══ FEATURED PIECES — horizontal scroll-snap carousel with arrows ═══ */}
+      <FeaturedCarousel />
 
       {/* ═══ BRAND STORY + embedded quote ═══ */}
       <section className="bg-bg-white">

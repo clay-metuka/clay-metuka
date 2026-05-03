@@ -3,6 +3,8 @@ export type Product = {
   slug: string;
   name: string;
   hebrew: string;
+  /** Short 3-5 word descriptor used on cards (Featured Work carousel). Falls back to description if absent. */
+  tagline?: string;
   description: string;
   longDescription?: string;
   ritual?: string;
@@ -23,6 +25,7 @@ export const products: Product[] = [
     slug: "natla",
     name: "Natla",
     hebrew: "נטלה",
+    tagline: "Ritual handwashing vessel",
     description: "Two-handled ritual handwashing vessel with personalized Hebrew engraving",
     longDescription:
       "The natla is the vessel used for netilat yadayim — the ritual washing of hands before eating bread. This handmade ceramic version features two handles for the traditional pouring method, with space for personalized Hebrew engraving of your family name or a meaningful word.",
@@ -42,6 +45,7 @@ export const products: Product[] = [
     slug: "kli-sheni",
     name: "Kli Sheni",
     hebrew: "כלי שני",
+    tagline: "Shabbat hot water vessel",
     description: "The Shabbat hot water vessel that didn't exist — until now",
     longDescription:
       "The kli sheni is the vessel you pour hot water into before making tea or coffee on Shabbat — a halachic requirement that has never had a dedicated, beautiful vessel. Until now. Handmade ceramic with a comfortable handle and spout designed for easy pouring.",
@@ -61,6 +65,7 @@ export const products: Product[] = [
     slug: "servingware",
     name: "Servingware",
     hebrew: "כלי הגשה",
+    tagline: "Handmade serving tray",
     description: "Handmade serving tray for your Friday night table",
     longDescription:
       "A generously sized ceramic tray designed to anchor your Shabbat table. Perfect for challah, kiddush cups, or as a centerpiece. Each tray can be personalized with Hebrew engraving.",
@@ -101,6 +106,7 @@ export const products: Product[] = [
     slug: "challah-basket",
     name: "Challah Basket",
     hebrew: "סלסלת חלה",
+    tagline: "For your challah",
     description: "Ceramic basket shaped to cradle your weekly challah",
     longDescription:
       "A wide, shallow ceramic basket with gently curved walls, designed to hold and present your weekly challah. The organic form complements the bread's braided shape.",
@@ -115,6 +121,91 @@ export const products: Product[] = [
       "/images/products/challah_basket/1-hero.jpeg",
       "/images/products/challah_basket/2-lifestyle.jpeg",
       "/images/products/challah_basket/3-detail.jpeg",
+    ],
+  },
+  {
+    id: "10",
+    slug: "wine-pourer",
+    name: "Wine Pourer",
+    hebrew: "מחלק יין",
+    tagline: "Spouted pourer for kiddush",
+    description:
+      "A spouted ceremonial pourer for distributing kiddush wine — clean, modular, and built for any size table.",
+    ritual:
+      "Kiddush is meant to be shared. But the traditional fountain pourer is awkward to clean, fragile, and rarely scales to the size of your table. The מחלק יין solves what no one else has: a single beautiful vessel that pours kiddush wine cleanly into every cup, whether you're three at the table or thirty. Shaped to honor the ritual without complicating it.\n\nHalachically, wine poured from a kiddush cup becomes pagum — diminished — and unfit for others to fulfill their obligation. The מחלק יין holds the wine before kiddush, letting you pour fresh, full-strength wine into each guest's cup after the bracha. Beautiful, functional, and quietly solving a problem most Shabbat tables have just learned to live with.",
+    category: "vessels",
+    occasion: ["shabbat", "ritual"],
+    status: "drop",
+    price: "₪150",
+    priceUSD: "$41",
+    size: "md",
+    collection: "first-light",
+    images: [
+      "/images/products/wine_pourer/hero.jpeg",
+      "/images/products/wine_pourer/lifestyle.jpeg",
+      "/images/products/wine_pourer/3-styled.jpeg",
+    ],
+  },
+  {
+    id: "7",
+    slug: "ceramic-mug",
+    name: "Ceramic Mug",
+    hebrew: "ספל",
+    tagline: "Teal glaze, botanical carving",
+    description: "Handmade mug with carved botanical motifs and teal glaze",
+    longDescription:
+      "A generous, comfortable mug featuring hand-carved botanical motifs under Clay Metuka's signature teal glaze. The angular handle is designed for a secure, natural grip.",
+    category: "mugs",
+    occasion: ["everyday"],
+    status: "drop",
+    price: "₪150",
+    priceUSD: "$41",
+    size: "md",
+    collection: "everyday",
+    images: ["/images/products/mug/hero.jpeg"],
+  },
+  {
+    id: "9",
+    slug: "espresso-cup",
+    name: "Espresso Cup",
+    hebrew: "כוס אספרסו",
+    tagline: "For your morning ritual",
+    description:
+      "A small, sturdy espresso cup, handmade for your morning ritual.",
+    ritual:
+      "Some rituals are ancient. Some are deeply personal. The first coffee of the morning deserves a vessel shaped by hand.",
+    category: "cups",
+    occasion: ["everyday"],
+    status: "drop",
+    price: "₪70",
+    size: "sm",
+    collection: "everyday",
+    images: [
+      "/images/products/espresso_cup/hero.jpeg",
+      "/images/products/espresso_cup/lifestyle.jpeg",
+    ],
+  },
+  {
+    id: "6",
+    slug: "tea-light-pair",
+    name: "Tea Light Holders",
+    hebrew: "מחזיקי נרות",
+    tagline: "For Shabbat candles",
+    description: "Pair of ceramic tea light holders for Shabbat candles",
+    longDescription:
+      "A matched pair of ceramic tea light holders with subtle texture and warmth. Designed to hold standard tea lights for Shabbat candle lighting.",
+    category: "candles",
+    occasion: ["shabbat"],
+    status: "commission",
+    price: "₪100",
+    priceUSD: "$27",
+    size: "sm",
+    collection: "first-light",
+    images: [
+      "/images/products/tea_light_pair/2-lifestyle.jpeg",
+      "/images/products/tea_light_pair/1-hero.jpeg",
+      "/images/products/tea_light_pair/3-styled.jpeg",
+      "/images/products/tea_light_pair/4-detail.jpeg",
     ],
   },
   {
@@ -135,87 +226,6 @@ export const products: Product[] = [
     size: "sm",
     collection: "first-light",
     images: [],
-  },
-  {
-    id: "6",
-    slug: "tea-light-pair",
-    name: "Tea Light Holders",
-    hebrew: "מחזיקי נרות",
-    description: "Pair of ceramic tea light holders for Shabbat candles",
-    longDescription:
-      "A matched pair of ceramic tea light holders with subtle texture and warmth. Designed to hold standard tea lights for Shabbat candle lighting.",
-    category: "candles",
-    occasion: ["shabbat"],
-    status: "commission",
-    price: "₪100",
-    priceUSD: "$27",
-    size: "sm",
-    collection: "first-light",
-    images: [
-      "/images/products/tea_light_pair/2-lifestyle.jpeg",
-      "/images/products/tea_light_pair/1-hero.jpeg",
-      "/images/products/tea_light_pair/3-styled.jpeg",
-      "/images/products/tea_light_pair/4-detail.jpeg",
-    ],
-  },
-  {
-    id: "7",
-    slug: "ceramic-mug",
-    name: "Ceramic Mug",
-    hebrew: "ספל",
-    description: "Handmade mug with carved botanical motifs and teal glaze",
-    longDescription:
-      "A generous, comfortable mug featuring hand-carved botanical motifs under Clay Metuka's signature teal glaze. The angular handle is designed for a secure, natural grip.",
-    category: "mugs",
-    occasion: ["everyday"],
-    status: "drop",
-    price: "₪150",
-    priceUSD: "$41",
-    size: "md",
-    collection: "everyday",
-    images: ["/images/products/mug/hero.jpeg"],
-  },
-  {
-    id: "9",
-    slug: "espresso-cup",
-    name: "Espresso Cup",
-    hebrew: "כוס אספרסו",
-    description:
-      "A small, sturdy espresso cup with a hamsa stamp — handmade for your morning ritual.",
-    ritual:
-      "Some rituals are ancient. Some are deeply personal. The first coffee of the morning deserves a vessel shaped by hand.",
-    category: "cups",
-    occasion: ["everyday"],
-    status: "drop",
-    price: "₪70",
-    size: "sm",
-    collection: "everyday",
-    images: [
-      "/images/products/espresso_cup/hero.jpeg",
-      "/images/products/espresso_cup/lifestyle.jpeg",
-    ],
-  },
-  {
-    id: "10",
-    slug: "kiddush-divider",
-    name: "Kiddush Divider",
-    hebrew: "מחלק קידוש",
-    description:
-      "A spouted ceremonial pourer for distributing kiddush wine — clean, modular, and built for any size table.",
-    ritual:
-      "Kiddush is meant to be shared. But the traditional fountain pourer is awkward to clean, fragile, and rarely scales to the size of your table. The מחלק קידוש solves what no one else has: a single beautiful vessel that pours kiddush wine cleanly into every cup, whether you're three at the table or thirty. Shaped to honor the ritual without complicating it.\n\nHalachically, wine poured from a kiddush cup becomes pagum — diminished — and unfit for others to fulfill their obligation. The מחלק קידוש holds the wine before kiddush, letting you pour fresh, full-strength wine into each guest's cup after the bracha. Beautiful, functional, and quietly solving a problem most Shabbat tables have just learned to live with.",
-    category: "vessels",
-    occasion: ["shabbat", "ritual"],
-    status: "drop",
-    price: "₪150",
-    priceUSD: "$41",
-    size: "md",
-    collection: "first-light",
-    images: [
-      "/images/products/wine_pourer/hero.jpeg",
-      "/images/products/wine_pourer/lifestyle.jpeg",
-      "/images/products/wine_pourer/3-styled.jpeg",
-    ],
   },
 ];
 

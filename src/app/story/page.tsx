@@ -18,7 +18,7 @@ export default function StoryPage() {
             priority
           />
         </div>
-        <div className="flex flex-col justify-center bg-bg-white px-6 py-16 md:px-[72px] md:py-24">
+        <div className="flex flex-col justify-center bg-bg-white px-6 py-12 md:px-[72px] md:py-16">
           <FadeIn>
             <Label>My Story</Label>
             <h1 className="mt-3 mb-8 font-heading text-[clamp(36px,4.5vw,56px)] font-light leading-[1.1] text-text">
@@ -47,7 +47,7 @@ export default function StoryPage() {
       </section>
 
       {/* Why Clay */}
-      <section className="bg-bg py-[120px]">
+      <section className="bg-bg py-[88px]">
         <div className="mx-auto max-w-[680px] px-6 text-center md:px-10">
           <FadeIn>
             <Label className="mb-3">The Medium</Label>
@@ -110,7 +110,7 @@ export default function StoryPage() {
       */}
 
       {/* Hiddur Mitzvah */}
-      <section className="bg-text py-[100px]">
+      <section className="bg-text py-[72px]">
         <div className="mx-auto max-w-[680px] px-6 text-center md:px-10">
           <FadeIn>
             <He className="mb-3 block text-[32px] text-teal-light">
@@ -129,7 +129,7 @@ export default function StoryPage() {
       </section>
 
       {/* The Name */}
-      <section className="bg-bg py-[100px]">
+      <section className="bg-bg py-[72px]">
         <div className="mx-auto max-w-[680px] px-6 text-center md:px-10">
           <FadeIn>
             <Label className="mb-4">The Name</Label>
